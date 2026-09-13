@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ==========================================================================
+     THINKWOOD — LAMINATES, LOUVRES, SCREENS & WALL PANELS LANDING PAGE
+     Same tokens, layout and component system as cladding.html / decking.html.
+     Every product on this page is real, pulled from the 10 catalogues supplied:
+       Laminates — Originals MCS, Super Matt, Surface Matters
+       Louvres & Panels — Snazzy Bamboo Louvres, Trendy Louvres & MCS,
+         Woodvents Louvres, Elemet Panels, Groove in Wood, Cressida Skirting,
+         HDHMR Designer Panels
+     This page is scoped to Laminates and Louvres & Panels only — Highlighters
+     get their own separate landing page, so no Highlighter content lives here.
+     PHOTOS: the hero, all 10 product cards and the "Our Work" grid use real
+       images extracted from the supplied catalogue PDFs (saved to
+       /website/images/). Card and hero shots are catalogue texture/render
+       photography; laminate cards use cropped colour-swatch chart photos
+       since Originals MCS / Super Matt / Surface Matters have no lifestyle
+       photography in their source PDFs. "Our Work" images are catalogue
+       lifestyle renders (mostly the Thinkwood-branded HDHMR book, plus
+       Snazzy/Trendy/Woodvents/Groove supplier renders) — not confirmed
+       photos of completed Thinkwood installations. Swap in real project
+       photography there when it's available.
+     CATALOGUES: all 10 PDFs live in /website/catalogues/ and the "Get Rate"
+       download links point at them directly.
+     ========================================================================== -->
+
+<title>Laminates, Louvres &amp; Wall Panels in Kolkata | Thinkwood Decorative Woods</title>
+<meta name="description" content="Decorative laminates plus bamboo-fibre and HDHMR composite louvres, fluted panels, tongue-and-groove wall panels and skirting — supplied and installed across Kolkata and eastern India. Samples in 24 hours.">
+<link rel="canonical" href="https://thinkwood.in/laminates-and-louvres.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Laminates, Louvres &amp; Wall Panels | Thinkwood Decorative Woods">
+<meta property="og:description" content="Decorative laminates plus bamboo-fibre and HDHMR composite louvres, fluted panels, tongue-and-groove wall panels and skirting — supplied and installed across Kolkata and eastern India. Samples in 24 hours.">
+<meta property="og:url" content="https://thinkwood.in/laminates-and-louvres.html">
+<meta name="theme-color" content="#FAFAF6">
+<link rel="icon" href="favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===== tokens — identical to thinkwood.in ===== */
+:root{
+  --cream:#F5EFE4; --bark:#2E1F0F; --oak:#7A5630; --sand:#C9A97A;
+  --moss:#3D4A30; --light:#FAFAF6; --gold:#A67C3A; --offwhite:#F0EAE0;
+  --rule:rgba(122,86,48,0.18);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --gut:clamp(1.25rem,5vw,5rem);
+  --maxw:1240px;
+  --mm:22px;
+}
+@media (max-width:760px){ :root{ --mm:13px; } }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--light); color:var(--bark);
+  font-family:'Jost',sans-serif; font-weight:300; font-size:16px; line-height:1.7;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:1.5px solid var(--oak);outline-offset:3px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--bark);margin:0}
+h1{font-size:clamp(2.4rem,5.2vw,4.4rem);line-height:1.08}
+h1 em,h2 em{font-style:italic;color:var(--oak)}
+h2{font-size:clamp(2rem,3.2vw,3rem);line-height:1.15}
+h3{font-family:'Jost',sans-serif;font-weight:500;font-size:1.02rem;line-height:1.4;margin:0;letter-spacing:.01em}
+
+.sec-tag{
+  font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  margin:0 0 1.4rem;display:flex;align-items:center;gap:.8rem;font-weight:400;
+}
+.sec-tag::before{content:'';display:block;width:2.4rem;height:1px;background:var(--gold)}
+.lede{font-size:.98rem;line-height:1.85;color:rgba(46,31,15,.72);max-width:58ch;font-weight:300}
+
+/* ===== buttons — site style ===== */
+.btn-primary,.btn-secondary{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:'Jost',sans-serif;font-size:.74rem;font-weight:400;
+  letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+  padding:.85rem 2rem;border:1px solid transparent;cursor:pointer;transition:all .25s;
+}
+.btn-primary{background:var(--bark);color:var(--cream)}
+.btn-primary:hover{background:var(--oak)}
+.btn-secondary{border-color:var(--oak);color:var(--oak);background:transparent}
+.btn-secondary:hover{background:var(--oak);color:var(--light)}
+.btn-sm{padding:.6rem 1.3rem;font-size:.66rem}
+
+/* ===== nav ===== */
+#navbar{
+  position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:2rem;
+  padding:.65rem var(--gut);background:rgba(250,250,246,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.logo-img{height:52px;object-fit:contain}
+.nav-links{display:flex;gap:2.2rem;list-style:none;margin:0 0 0 auto;padding:0}
+.nav-links a{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bark);text-decoration:none;opacity:.82;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav-cta{
+  font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:.55rem 1.4rem;
+  border:1px solid var(--oak);color:var(--oak);text-decoration:none;transition:all .25s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--oak);color:var(--light)}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .logo-img{height:42px}
+  #navbar{gap:1rem}
+  .nav-cta{margin-left:auto}
+}
+
+/* ===== hero ===== */
+.hero{padding:clamp(2.8rem,6vw,5rem) 0 clamp(2rem,4vw,3.4rem)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.8rem,5vw,4rem);align-items:center}
+@media (max-width:900px){ .hero-grid{grid-template-columns:1fr} }
+.hero-btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero-facts{
+  display:flex;flex-wrap:wrap;gap:.5rem 2.4rem;margin-top:2.2rem;padding-top:1.4rem;
+  border-top:1px solid var(--rule);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(46,31,15,.55);
+}
+.hero-facts b{color:var(--oak);font-weight:500}
+
+.detail{background:var(--cream);border:1px solid var(--rule);padding:1.3rem}
+.detail svg{width:100%;height:auto;display:block}
+.detail figcaption{
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+  margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--rule);
+}
+.hero-shot{padding:0}
+.hero-shot img{width:100%;height:clamp(280px,34vw,420px);object-fit:cover;object-position:center 42%;display:block}
+.hero-shot figcaption{margin:1rem 1.3rem 1.3rem;padding-top:.85rem}
+.dr{opacity:0;animation:drIn .8s var(--ease) forwards}
+.dr2{animation-delay:.16s}.dr3{animation-delay:.32s}.dr4{animation-delay:.48s}.dr5{animation-delay:.64s}
+@keyframes drIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+
+/* ===== sections ===== */
+.sec{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--rule)}
+.sec--cream{background:var(--cream)}
+.sec-head{max-width:62ch;margin-bottom:2.6rem}
+.sec-head p{margin:1rem 0 0}
+
+/* ===== material cards ===== */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media (max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:620px){ .grid{grid-template-columns:1fr} }
+
+.pcard{background:var(--light);border:1px solid var(--rule);display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s,transform .25s}
+.pcard:hover{border-color:var(--sand);transform:translateY(-3px)}
+.pcard-media{position:relative;aspect-ratio:4/3;background:var(--offwhite);overflow:hidden}
+.pcard-media svg{position:absolute;inset:0;width:100%;height:100%}
+.pcard-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease)}
+.pcard:hover .pcard-media img{transform:scale(1.05)}
+.pcard-tag{position:absolute;top:.8rem;left:.8rem;z-index:2;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream);background:rgba(46,31,15,.68);padding:.32rem .7rem}
+.pcard-body{padding:1.4rem 1.4rem 1.5rem;display:flex;flex-direction:column;flex:1}
+.pcard-body p{margin:.7rem 0 0;font-size:.86rem;line-height:1.75;color:rgba(46,31,15,.66)}
+.specs{list-style:none;margin:1.2rem 0 1.4rem;padding:1rem 0 0;border-top:1px solid var(--rule);font-size:.72rem;letter-spacing:.06em}
+.specs li{display:flex;justify-content:space-between;gap:1rem;padding:.24rem 0;color:rgba(46,31,15,.55);text-transform:uppercase}
+.specs b{color:var(--oak);font-weight:500;text-align:right;text-transform:none;letter-spacing:.02em}
+.pcard-foot{margin-top:auto;display:flex;align-items:stretch;gap:.6rem;flex-wrap:wrap}
+.dl-link{display:inline-flex;align-items:center;gap:.45rem;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--oak);text-decoration:none;padding:.6rem 1.1rem;border:1px solid var(--rule);background:transparent;transition:border-color .25s,background .25s,color .25s}
+.dl-link:hover{border-color:var(--oak);background:var(--oak);color:var(--light)}
+.dl-link svg{width:13px;height:13px;fill:currentColor;flex:0 0 13px}
+.check-row{display:flex;align-items:flex-start;gap:.7rem;padding:.9rem 0 .2rem}
+.check-row input{width:16px;height:16px;flex:0 0 16px;margin:.18rem 0 0;accent-color:var(--sand)}
+.check-row label{font-size:.82rem;color:rgba(245,239,228,.72);line-height:1.6;letter-spacing:0;text-transform:none;margin:0;cursor:pointer}
+
+/* ===== portfolio ===== */
+.sec--off{background:var(--offwhite)}
+.port-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+.port-item{position:relative;overflow:hidden;background:#1a1206;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.port-item:hover{transform:translateY(-3px);box-shadow:0 22px 50px -28px rgba(20,12,4,.45)}
+.port-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+.port-item:hover img{transform:scale(1.045)}
+.port-label{position:absolute;bottom:0;left:0;right:0;padding:.85rem 1.1rem;background:linear-gradient(to top,rgba(20,12,4,.88),transparent);color:var(--cream);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.port-item:hover .port-label{opacity:1}
+.pw{grid-column:span 6;height:340px}
+.pt{grid-column:span 4;height:340px}
+@media (max-width:900px){
+  .port-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .pw{grid-column:span 2;height:230px}
+  .pt{grid-column:span 1;height:230px}
+  .port-label{font-size:.62rem;opacity:1}
+}
+@media (max-width:520px){
+  .port-grid{grid-template-columns:1fr}
+  .pw{grid-column:span 1;height:220px}
+  .pt{grid-column:span 1;height:220px}
+}
+
+/* ===== steps ===== */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1.4rem}
+@media (max-width:980px){ .steps{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:520px){ .steps{grid-template-columns:1fr} }
+.step{border-top:1px solid var(--bark);padding-top:1rem}
+.step-n{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--sand);line-height:1}
+.step h3{margin:.5rem 0 .5rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+.step p{margin:0;font-size:.82rem;line-height:1.7;color:rgba(46,31,15,.62)}
+
+/* ===== faq ===== */
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:1.15rem 2.4rem 1.15rem 0;position:relative;font-size:.95rem;font-weight:400}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:.3rem;top:1rem;font-size:1.2rem;color:var(--oak);font-weight:300}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 1.3rem;color:rgba(46,31,15,.66);font-size:.88rem;line-height:1.85;max-width:72ch}
+.faq details p a{color:var(--oak)}
+
+/* ===== quote ===== */
+.quote{background:var(--bark);color:var(--cream);border-top:0}
+.quote h2{color:var(--cream)}
+.quote h2 em{color:var(--sand)}
+.quote .sec-tag{color:var(--sand)}
+.quote .sec-tag::before{background:var(--sand)}
+.quote-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4.5rem)}
+@media (max-width:880px){ .quote-grid{grid-template-columns:1fr} }
+.quote-aside p{color:rgba(245,239,228,.6);font-size:.9rem;line-height:1.85}
+
+.contact-rows{margin-top:2rem;display:flex;flex-direction:column}
+.crow-link{
+  display:flex;align-items:center;gap:.95rem;padding:.85rem 0;text-decoration:none;
+  border-bottom:1px solid rgba(245,239,228,.1);color:rgba(245,239,228,.78);font-size:.88rem;transition:color .2s;
+}
+.crow-link:hover{color:#fff}
+.crow-link .ico{width:34px;height:34px;flex:0 0 34px;border-radius:50%;display:grid;place-items:center}
+.crow-link .lbl{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,239,228,.42);display:block;margin-bottom:.15rem}
+.ico-wa{background:#25D366}
+.ico-fb{background:#1877F2}
+.ico-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.ico-call{background:var(--moss)}
+.ico svg{width:17px;height:17px;fill:#fff}
+
+/* ===== form ===== */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.full{grid-column:1/-1}
+@media (max-width:560px){ .form{grid-template-columns:1fr} }
+.field label{display:block;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,239,228,.45);margin-bottom:.45rem}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'Jost',sans-serif;font-weight:300;font-size:.9rem;color:var(--cream);
+  background:transparent;border:1px solid rgba(245,239,228,.2);padding:.72rem .8rem;border-radius:0;
+}
+.field textarea{resize:vertical;min-height:92px}
+.field select option{color:var(--bark)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--sand);outline:none}
+.form .btn-primary{background:var(--sand);color:var(--bark);justify-content:center;width:100%}
+.form .btn-primary:hover{background:var(--cream)}
+.consent{font-size:.68rem;color:rgba(245,239,228,.35);margin:.5rem 0 0;letter-spacing:.06em}
+[data-fs-success],[data-fs-error]{grid-column:1/-1;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 0}
+[data-fs-success]{color:var(--sand)}
+[data-fs-error]{color:#D89B9B}
+
+/* ===== footer — mirrors thinkwood.in ===== */
+.footer-main{background:#1a0e05;padding:4rem 5rem 2rem;box-sizing:border-box;display:flex;flex-direction:column}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem;width:100%;align-items:start}
+.footer-three-cols{display:contents}
+.footer-logo-img{height:52px;object-fit:contain;margin-bottom:1.2rem}
+.footer-brand-desc{font-size:0.82rem;color:rgba(245,239,228,0.55);line-height:1.75;max-width:240px;margin-bottom:1.5rem}
+.footer-socials{display:flex;gap:0.75rem}
+.footer-social-btn{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.25s;flex-shrink:0;border:1px solid rgba(245,239,228,0.2)}
+.footer-social-btn svg{width:17px;height:17px;fill:rgba(245,239,228,.75);transition:fill .25s}
+.footer-social-btn:hover{border-color:transparent}
+.footer-social-btn:hover svg{fill:#fff}
+.footer-social-btn.wa:hover{background:#25D366}
+.footer-social-btn.fb:hover{background:#1877F2}
+.footer-social-btn.ig:hover{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.footer-social-btn.call:hover{background:var(--moss)}
+.footer-col-title{font-size:0.65rem;letter-spacing:0.26em;text-transform:uppercase;color:#C4956C;margin-bottom:1.4rem}
+.footer-col-links{display:flex;flex-direction:column;gap:0.75rem}
+.footer-col-links a{font-size:0.84rem;color:rgba(245,239,228,0.65);text-decoration:none;transition:color 0.2s}
+.footer-col-links a:hover{color:#fff}
+.footer-visit-item{font-size:0.84rem;color:rgba(245,239,228,0.65);line-height:1.7;margin:0 0 0.5rem}
+.footer-visit-item a{color:rgba(245,239,228,0.65);text-decoration:none;transition:color 0.2s}
+.footer-visit-item a:hover{color:#fff}
+.footer-bottom-bar{border-top:1px solid rgba(245,239,228,0.08);padding:1.2rem 0 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;width:100%;margin-top:auto}
+.footer-copy,.footer-location{font-size:0.72rem;color:rgba(245,239,228,0.3);letter-spacing:0.06em;margin:0}
+@media (max-width:900px){
+  .footer-main{padding:3rem 2rem 2rem}
+  .footer-grid{grid-template-columns:1fr;gap:1.5rem}
+  .footer-three-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem}
+  .footer-col-links a{font-size:0.75rem}
+  .footer-col-title{font-size:0.6rem;margin-bottom:0.6rem}
+  .footer-visit-item{font-size:0.75rem}
+}
+@media (max-width:520px){ .footer-main{padding:2.5rem 1.25rem 1.5rem} }
+
+/* ===== whatsapp float ===== */
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:80;width:54px;height:54px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(26,14,5,.28)}
+.wa-fab svg{width:28px;height:28px;fill:#fff}
+
+/* ===== reveal ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .dr{opacity:1}
+}
+
+/* ===== breadcrumb / back to site ===== */
+.crumb{background:var(--cream);border-bottom:1px solid var(--rule)}
+.crumb-in{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;
+  padding:.6rem 0;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase}
+.crumb a{color:var(--oak);text-decoration:none;display:inline-flex;align-items:center;gap:.45rem;transition:opacity .2s}
+.crumb a:hover{opacity:.65}
+.crumb a svg{width:11px;height:11px;fill:currentColor}
+.crumb .sep{color:rgba(46,31,15,.28)}
+.crumb .here{color:rgba(46,31,15,.5)}
+@media (max-width:520px){ .crumb-in{font-size:.62rem;letter-spacing:.12em} }
+
+/* ===== sticky top bar ===== */
+/* nav + breadcrumb travel together, so "Back to Thinkwood" stays reachable from anywhere on the page */
+.topbar{position:sticky;top:0;z-index:60}
+.topbar #navbar{position:static}
+section[id]{scroll-margin-top:132px}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<div class="topbar">
+<nav id="navbar">
+  <ul class="nav-links">
+    <li><a href="#laminates">Laminates</a></li>
+    <li><a href="#materials">Louvres &amp; Panels</a></li>
+    <li><a href="#work">Our Work</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#quote" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="crumb">
+  <div class="wrap crumb-in">
+    <a href="https://thinkwood.in/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/></svg>Back to Thinkwood</a>
+    <span class="sep">/</span>
+    <a href="https://thinkwood.in/#products">All Products</a>
+    <span class="sep">/</span>
+    <span class="here">Laminates, Louvres &amp; Panels</span>
+  </div>
+</div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="sec-tag">Laminates, Louvres &amp; Panels — Kolkata</p>
+      <h1>Ten systems.<br><em>One warehouse.</em></h1>
+      <p class="lede" style="margin-top:1.4rem">
+        Decorative laminates for shutters and furniture, plus bamboo-fibre and
+        HDHMR composite louvres, fluted panels, tongue-and-groove wall panels
+        and skirting — stocked, supplied and installed across Kolkata and
+        eastern India.
+      </p>
+      <div class="hero-btns">
+        <a href="#quote" class="btn-primary">Get Rates &amp; Samples</a>
+        <a href="#laminates" class="btn-secondary">See The Range</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>24 hrs</b> · samples in Kolkata</div>
+        <div><b>10 systems</b> · one warehouse</div>
+        <div><b>Supply + install</b> · one party</div>
+      </div>
+    </div>
+
+    <figure class="detail hero-shot dr" style="margin:0">
+      <img src="images/hero-laminates-louvres.jpg" alt="Dining room feature wall in sage-green HDHMR fluted panelling">
+      <figcaption>HDHMR Designer Panels — dining feature wall, fluted finish</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== LAMINATES ===== -->
+<section class="sec sec--cream" id="laminates">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">01 — Laminates</p>
+      <h2>Three laminate books,<br><em>every finish family covered.</em></h2>
+      <p class="lede">A mineral composite sheet, a bendable soft-touch polymer, and the full
+        464-design decorative laminate catalogue. Every one is stocked or indented by us, and
+        comes with a physical sample before you commit.</p>
+    </div>
+
+    <div class="grid" id="laminateGrid">
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Laminate</span>
+          <img src="images/card-originals-mcs.jpg" alt="Originals MCS woven-texture finish close-up" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Originals MCS</h3>
+          <p>Mineral composite sheet with an anti-finger, feather-touch face — each colour pressed in three or four textures (plain, weave, check, leather) so one tone runs from a flat shutter face to a woven feature panel.</p>
+          <ul class="specs">
+            <li>Sheet size <b>3000×1220 mm (10'×4')</b></li>
+            <li>Colours <b>9</b></li>
+            <li>Textures <b>Plain / Weave / Check / Leather</b></li>
+            <li>Edge band <b>25 mm matching</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Originals MCS">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-originals-mcs.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Laminate</span>
+          <img src="images/card-super-matt.jpg" alt="Super Matt colour swatch chart" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Super Matt</h3>
+          <p>A bendable, anti-scratch polymer laminate with a soft-touch matt face — wraps a 180° return over ply or MDF without cracking, so no edge-banding strip is needed.</p>
+          <ul class="specs">
+            <li>Finishes <b>24</b></li>
+            <li>Bend <b>180° over ply/MDF</b></li>
+            <li>Durability <b>10 years</b></li>
+            <li>Edge band <b>Not required</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Super Matt">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-super-matt.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Laminate</span>
+          <img src="images/card-surface-matters.jpg" alt="Surface Matters marble-look laminate finish" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Surface Matters</h3>
+          <p>The full-range decorative laminate book — solids, woodgrains, stone and synchronised embossed faces across twelve collections, so almost any brief lands somewhere in the book.</p>
+          <ul class="specs">
+            <li>Collections <b>12</b></li>
+            <li>Designs <b>464</b></li>
+            <li>Thickness <b>1.00 / 1.25 mm</b></li>
+            <li>Sheet <b>1220×2440 mm (4'×8')</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Surface Matters">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-surface-matters.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOUVRES & PANELS ===== -->
+<section class="sec sec--cream" id="materials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">02 — Louvres &amp; Panels</p>
+      <h2>Seven systems,<br><em>one colour family each.</em></h2>
+      <p class="lede">Bamboo-fibre and HDHMR composite — louvres, fluted panels, tongue-and-groove
+        wall panels and skirting. Every one is stocked or indented by us, and comes with a
+        physical sample before you commit.</p>
+    </div>
+
+    <div class="grid" id="cardGrid">
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Louvre</span>
+          <img src="images/portfolio-snazzy-living-room.jpg" alt="Snazzy Bamboo Louvres fluted profile, charcoal finish" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Snazzy Bamboo Louvres</h3>
+          <p>Bamboo-fibre composite louvres in a muted architectural palette — charcoal, slate, olive and clay. Four flute depths plus a flat mineral composite sheet, so a whole room wraps in one colour family.</p>
+          <ul class="specs">
+            <li>Profiles <b>L-5 / L-6 / L-7 / L-8 + MCS</b></li>
+            <li>Louvre length <b>2440 mm</b></li>
+            <li>Sheet <b>3000×1220 mm</b></li>
+            <li>Finishes <b>30</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Snazzy Bamboo Louvres">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-snazzy-bamboo-louvres.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Louvre + Sheet</span>
+          <img src="images/portfolio-trendy-reading-corner.jpg" alt="Trendy Louvres and MCS fluted profile, slate finish" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Trendy Louvres &amp; MCS</h3>
+          <p>A textured, plaster-and-stone reading of the same system — the L-8 louvre in soft leather grain, paired with a trowelled-concrete mineral composite sheet to break a wall into fluted and flat planes.</p>
+          <ul class="specs">
+            <li>Louvre <b>2440×167×9 mm</b></li>
+            <li>MCS sheet <b>3000×1220×1.5 mm</b></li>
+            <li>Profile <b>L-8</b></li>
+            <li>Finishes <b>10</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Trendy Louvres &amp; MCS">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-trendy-louvres-mcs.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Louvre</span>
+          <img src="images/portfolio-woodvents-living-room.jpg" alt="Woodvents Louvres fluted profile in a timber finish" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Woodvents Louvres</h3>
+          <p>Slatted louvre panels that let a space breathe — a deep, evenly pitched groove in warm oak, teak and weathered-grey tones for full-height feature walls, ceilings and partition screens.</p>
+          <ul class="specs">
+            <li>Profiles <b>L-15 / L-16</b></li>
+            <li>Panel <b>2900×225 / 228 mm</b></li>
+            <li>Thickness <b>11 / 6 mm</b></li>
+            <li>Finishes <b>22</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Woodvents Louvres">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-woodvents-louvres.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Louvre Panel</span>
+          <img src="images/card-elemet-panels.jpg" alt="Elemet Panels square-rib texture close-up" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Elemet Panels</h3>
+          <p>Interior louvre panelling in three ready-made sections — square rib, rounded flute and peaked rib — every rib identical down a 2.9 m length, going up on adhesive rather than a batten frame.</p>
+          <ul class="specs">
+            <li>Sections <b>L-15 / L-16 / L-17</b></li>
+            <li>Length <b>2900 mm</b></li>
+            <li>Depths <b>6–11 mm</b></li>
+            <li>Finishes <b>15</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Elemet Panels">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-elemet-panels.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Groove Panel</span>
+          <img src="images/portfolio-groove-lounge-alcove.jpg" alt="Groove in Wood reeded panel in a natural oak finish" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Groove in Wood</h3>
+          <p>A tighter, shallower reed than Woodvents — closer to traditional beadboard, but in a composite that will not swell or split. Ten timber decors from pale ash to smoked walnut.</p>
+          <ul class="specs">
+            <li>Profile <b>L-8</b></li>
+            <li>Panel <b>2900×167 mm</b></li>
+            <li>Thickness <b>9 mm</b></li>
+            <li>Finishes <b>10</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Groove in Wood">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-groove-in-wood.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Skirting</span>
+          <img src="images/site-cressida-reception.jpg" alt="Cressida Skirting profile in a timber finish" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Cressida Skirting</h3>
+          <p>A moulded skirting profile in bamboo-fibre composite — 95 mm high with a classical stepped top edge. Thirty-one finishes, seven timber decors and twenty-four solids, for a skirting that reads as trim rather than an afterthought.</p>
+          <ul class="specs">
+            <li>Profile <b>Cressida Skirt</b></li>
+            <li>Length <b>2900 mm</b></li>
+            <li>Section <b>95×11 mm</b></li>
+            <li>Finishes <b>31</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Cressida Skirting">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-cressida-skirting.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Wall Panel</span>
+          <img src="images/site-hdhmr-music-room.jpg" alt="Living room feature wall finished in HDHMR Designer Panels" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>HDHMR Designer Panels</h3>
+          <p>Grooved and fluted HDHMR wall panels, tongue-and-groove jointed, in nine profiles and eighteen German and Italian foil-laminate or veneer finishes. Full 3000 mm height, no horizontal joint floor to ceiling.</p>
+          <ul class="specs">
+            <li>Profiles <b>9</b></li>
+            <li>Thickness <b>13 mm</b></li>
+            <li>Panel size <b>3000×130 mm</b></li>
+            <li>Finishes <b>18</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="HDHMR Designer Panels">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-hdhmr-designer-panels.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section class="sec sec--off" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">03 — Our Work</p>
+      <h2>Feature walls and interiors<br><em>the range is built for.</em></h2>
+      <p class="lede">Room settings from the HDHMR Designer Panels catalogue — dining rooms, lobbies, bedrooms and
+        lounges. Different brief, different profile, same range across the room.</p>
+    </div>
+    <div class="port-grid reveal">
+      <div class="port-item pt">
+        <img src="images/portfolio-hdhmr-home-theatre.jpg" alt="Home theatre with fluted HDHMR panelling" loading="lazy">
+        <span class="port-label">Home Theatre &mdash; HDHMR Designer Panels</span>
+      </div>
+      <div class="port-item pt">
+        <img src="images/portfolio-hdhmr-lift-lobby.jpg" alt="Lift lobby finished in HDHMR panels" loading="lazy">
+        <span class="port-label">Lift Lobby &mdash; HDHMR Designer Panels</span>
+      </div>
+      <div class="port-item pt">
+        <img src="images/portfolio-hdhmr-bedroom.jpg" alt="Bedroom with an HDHMR panelled headboard wall" loading="lazy">
+        <span class="port-label">Bedroom Suite &mdash; HDHMR Designer Panels</span>
+      </div>
+      <div class="port-item pt">
+        <img src="images/portfolio-hdhmr-cafe-counter.jpg" alt="Cafe counter finished in HDHMR panelling" loading="lazy">
+        <span class="port-label">Cafe Counter &mdash; HDHMR Designer Panels</span>
+      </div>
+      <div class="port-item pt">
+        <img src="images/portfolio-hdhmr-kitchen.jpg" alt="Kitchen and dining room lined in HDHMR panels" loading="lazy">
+        <span class="port-label">Kitchen &amp; Dining &mdash; HDHMR Designer Panels</span>
+      </div>
+      <div class="port-item pt">
+        <img src="images/portfolio-hdhmr-kids-room.jpg" alt="Children's room with HDHMR panelled walls" loading="lazy">
+        <span class="port-label">Children's Room &mdash; HDHMR Designer Panels</span>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">04 — How It Runs</p>
+      <h2>Enquiry to <em>finished wall.</em></h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="step-n">01</div><h3>Tell Us The Space</h3><p>Area, room type and the profile you have in mind — fluted, ribbed, grooved or flat panel.</p></div>
+      <div class="step"><div class="step-n">02</div><h3>Samples On Your Desk</h3><p>Physical swatches within 24 hours in Kolkata, couriered elsewhere in the east.</p></div>
+      <div class="step"><div class="step-n">03</div><h3>Measure &amp; BOQ</h3><p>Panel layout, framework and wastage — priced as one line, not surprises.</p></div>
+      <div class="step"><div class="step-n">04</div><h3>Supply</h3><p>Ex-stock from our Kolkata warehouse, or indented against your programme dates.</p></div>
+      <div class="step"><div class="step-n">05</div><h3>Installation</h3><p>Our trained applicators, so material and workmanship sit with one party.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec sec--cream" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">05 — Straight Answers</p>
+      <h2>Questions we get <em>every week.</em></h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Can these louvres and panels be used outdoors?</summary><p>All seven ranges (Snazzy, Trendy, Woodvents, Groove in Wood, Elemet, Cressida, HDHMR) are water and termite resistant, so they hold up in kitchens, wash areas and covered balconies. They're not a facade-grade product for fully exposed exterior walls — for open-air facades and boundary screens, ask us about the aluminium and WPC options on our <a href="cladding.html#materials">cladding range</a>.</p></details>
+      <details><summary>What's the difference between Super Matt and Surface Matters?</summary><p>Super Matt is a bendable polymer laminate in 24 solid colours, built for shutter edges and 180° wraps where a joint would otherwise show. Surface Matters is the full decorative book — 464 designs across woodgrains, stone and solids — for everything that isn't a curved or wrapped edge.</p></details>
+      <details><summary>Does Originals MCS need edge banding?</summary><p>Yes — a matching 25 mm edge band is available for every finish. Super Matt is the one range in this book that doesn't need banding, since the polymer itself wraps a 180° return.</p></details>
+      <details><summary>What's the difference between Woodvents and Groove in Wood?</summary><p>Both are reeded L-8/L-15/L-16 profile panels, but Woodvents cuts a deeper, wider-pitched groove built to read across a full-height wall, while Groove in Wood is a tighter, shallower reed closer to traditional beadboard — better suited to shutters and headboards seen up close.</p></details>
+      <details><summary>What is the Mineral Composite Sheet (MCS)?</summary><p>A flat 1.5 mm sheet in the same finish family as the Snazzy and Trendy louvres, used to fill in flat wall sections between fluted panels so a room reads as one material at different depths rather than a patchwork.</p></details>
+      <details><summary>Do you supply only, or install as well?</summary><p>Both. Most clients take supply plus installation through our applicators so material and workmanship stay with one party. Supply-only is available if your carpenter or contractor is already appointed.</p></details>
+      <details><summary>How long from order to delivery?</summary><p>Stock profiles ship within 3–7 working days within Kolkata. Custom colours and larger production runs carry a 2–4 week lead time. You'll get an accurate date in writing before the order is released.</p></details>
+      <details><summary>Is there a minimum order?</summary><p>There's no hard minimum — a single feature wall, partition or skirting run is viable. Custom colour batches on any profile do carry a practical minimum, and we'll flag that upfront.</p></details>
+      <details><summary>Can we see the material before ordering?</summary><p>Yes. Visit the Experience Centre at 13C Paul Mansions, 6 Bishop Lefroy Road, Mon–Sat 10 AM to 7 PM, to see full panels and profiles mounted. Call ahead so we can set aside time for you.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUOTE ===== -->
+<section class="sec quote" id="quote">
+  <div class="wrap quote-grid">
+    <div class="quote-aside">
+      <p class="sec-tag">Enquiry</p>
+      <h2>Send the room.<br><em>Get a rate.</em></h2>
+      <p>A photo, a drawing or a rough area is enough to start. We'll come back with material
+        options, an indicative rate and samples.</p>
+
+      <div class="contact-rows">
+        <a class="crow-link" href="https://wa.me/919830020010?text=Hi%20Thinkwood%2C%20I%27m%20looking%20at%20laminates%2C%20louvres%20and%20panels." target="_blank" rel="noopener">
+          <span class="ico ico-wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg></span>
+          <span><span class="lbl">WhatsApp</span>Message us — fastest reply</span>
+        </a>
+        <a class="crow-link" href="tel:+919830020010">
+          <span class="ico ico-call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
+          <span><span class="lbl">Call</span>+91 98300 20010</span>
+        </a>
+        <a class="crow-link" href="https://www.instagram.com/thinkwood.in/" target="_blank" rel="noopener">
+          <span class="ico ico-ig"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 00-2.13 1.38A5.9 5.9 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 002.13-1.38 5.9 5.9 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 00-1.38-2.13A5.9 5.9 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg></span>
+          <span><span class="lbl">Instagram</span>@thinkwood.in</span>
+        </a>
+        <a class="crow-link" href="https://www.facebook.com/thinkwoodofficial/" target="_blank" rel="noopener">
+          <span class="ico ico-fb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.5c-1.48 0-1.94.92-1.94 1.87v2.25h3.3l-.53 3.49h-2.77v8.44C19.61 23.1 24 18.1 24 12.07z"/></svg></span>
+          <span><span class="lbl">Facebook</span>Thinkwood Official</span>
+        </a>
+        <a class="crow-link" href="https://maps.google.com/?q=13C+Paul+Mansions+6+Bishop+Lefroy+Road+Kolkata+700020" target="_blank" rel="noopener">
+          <span class="ico" style="background:var(--oak)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1114.5 9 2.5 2.5 0 0112 11.5z"/></svg></span>
+          <span><span class="lbl">Experience Centre</span>13C Paul Mansions, Bishop Lefroy Rd</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div data-fs-success style="display:none">Sent — we'll be in touch shortly.</div>
+      <div data-fs-error style="display:none"></div>
+
+      <form id="inquiry-form" class="form">
+        <input type="hidden" name="_subject" value="Laminates / Louvres / Panels enquiry — thinkwood.in">
+        <input type="hidden" name="gclid" id="f_gclid">
+        <input type="hidden" name="utm_source" id="f_source">
+        <input type="hidden" name="utm_campaign" id="f_campaign">
+        <input type="hidden" name="utm_term" id="f_term">
+        <input type="hidden" name="landing_page" value="laminates-louvres-panels">
+
+        <div class="field"><label for="q_name">Your Name</label><input id="q_name" type="text" name="name" data-fs-field required autocomplete="name"></div>
+        <div class="field"><label for="q_phone">Phone</label><input id="q_phone" type="tel" name="phone" data-fs-field required autocomplete="tel" inputmode="tel"></div>
+        <div class="field"><label for="q_email">Email</label><input id="q_email" type="email" name="email" data-fs-field autocomplete="email"></div>
+        <div class="field"><label for="q_city">Project Location</label><input id="q_city" type="text" name="location" data-fs-field placeholder="Kolkata, Siliguri, Guwahati…"></div>
+        <div class="field"><label for="q_material">Product Of Interest</label>
+          <select id="q_material" name="material" data-fs-field>
+            <option value="">Not sure yet — advise me</option>
+            <optgroup label="Laminates">
+              <option>Originals MCS</option>
+              <option>Super Matt</option>
+              <option>Surface Matters</option>
+            </optgroup>
+            <optgroup label="Louvres &amp; Panels">
+              <option>Snazzy Bamboo Louvres</option>
+              <option>Trendy Louvres &amp; MCS</option>
+              <option>Woodvents Louvres</option>
+              <option>Elemet Panels</option>
+              <option>Groove in Wood</option>
+              <option>Cressida Skirting</option>
+              <option>HDHMR Designer Panels</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="field"><label for="q_area">Approx Area (sq ft)</label><input id="q_area" type="text" name="area" data-fs-field inputmode="numeric" placeholder="e.g. 600"></div>
+        <div class="field full"><label for="q_msg">What Are You Covering?</label><textarea id="q_msg" name="message" data-fs-field placeholder="A living room feature wall and a reception partition, work starting next month."></textarea></div>
+        <div class="full check-row">
+          <input type="checkbox" id="q_cat" name="send_catalogues" value="Yes — send the full laminates, louvres &amp; panels catalogue set">
+          <label for="q_cat">Email me the full catalogue set (all 10 systems, PDF)</label>
+        </div>
+        <div class="full">
+          <button type="submit" class="btn-primary" data-fs-submit-btn>Send Inquiry</button>
+          <p class="consent">We'll only use this to answer your enquiry.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer-main">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <p class="footer-brand-desc">Premium exterior and interior building materials for architects, designers, developers and homeowners across Kolkata and eastern India.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/thinkwood.in/" target="_blank" rel="noopener" class="footer-social-btn ig" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 00-2.13 1.38A5.9 5.9 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 002.13-1.38 5.9 5.9 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 00-1.38-2.13A5.9 5.9 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg>
+        </a>
+        <a href="https://www.facebook.com/thinkwoodofficial/" target="_blank" rel="noopener" class="footer-social-btn fb" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.5c-1.48 0-1.94.92-1.94 1.87v2.25h3.3l-.53 3.49h-2.77v8.44C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </a>
+        <a href="https://wa.me/919830020010" target="_blank" rel="noopener" class="footer-social-btn wa" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+        </a>
+        <a href="tel:+919830020010" class="footer-social-btn call" aria-label="Call us">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-three-cols">
+      <div>
+        <p class="footer-col-title">Explore</p>
+        <div class="footer-col-links">
+          <a href="https://thinkwood.in/#products">What we offer</a>
+          <a href="https://thinkwood.in/#portfolio">Projects</a>
+          <a href="https://thinkwood.in/#why">Why Thinkwood</a>
+          <a href="https://thinkwood.in/#contact">Experience Centre</a>
+          <a href="#quote">Get a quote</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Products</p>
+        <div class="footer-col-links">
+          <a href="cladding.html">Cladding</a>
+          <a href="decking.html">Decking</a>
+          <a href="laminates-and-louvres.html">Laminates &amp; louvres</a>
+          <a href="highlighters.html">Highlighters</a>
+          <a href="flooring.html">Flooring</a>
+          <a href="forms-and-surfaces.html">Forms + Surfaces</a>
+          <a href="outdoor-landscaping-products.html">Outdoor landscaping</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Visit</p>
+        <p class="footer-visit-item">13C Paul Mansions, 1st Floor<br>6 Bishop Lefroy Road<br>Kolkata 700020</p>
+        <p class="footer-visit-item"><a href="tel:+919830020010">+91 98300 20010</a></p>
+        <p class="footer-visit-item"><a href="mailto:thinkwood.ashish@gmail.com">thinkwood.ashish@gmail.com</a></p>
+        <p class="footer-visit-item">Mon – Sat · 10 AM to 7 PM</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom-bar">
+    <p class="footer-copy">© <span id="yr"></span> Thinkwood Decorative Woods. All rights reserved.</p>
+    <p class="footer-location">Kolkata, West Bengal, India</p>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/919830020010?text=Hi%20Thinkwood%2C%20I%27m%20looking%20at%20laminates%2C%20louvres%20and%20panels." aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","name":"Laminates, Louvres, Screens and Wall Panel Supply and Installation","serviceType":"Decorative laminates plus bamboo-fibre and HDHMR composite louvres, fluted panels, tongue-and-groove wall panels and skirting","areaServed":[{"@type":"City","name":"Kolkata"},{"@type":"State","name":"West Bengal"}],"provider":{"@type":"LocalBusiness","name":"Thinkwood Decorative Woods","telephone":"+91-98300-20010","email":"thinkwood.ashish@gmail.com","url":"https://thinkwood.in","address":{"@type":"PostalAddress","streetAddress":"13C Paul Mansions, 6 Bishop Lefroy Road","addressLocality":"Kolkata","addressRegion":"West Bengal","postalCode":"700020","addressCountry":"IN"}}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thinkwood.in/"},{"@type":"ListItem","position":2,"name":"Laminates, Louvres & Panels","item":"https://thinkwood.in/laminates-and-louvres.html"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Can these louvres and panels be used outdoors?","acceptedAnswer":{"@type":"Answer","text":"All seven louvre and panel ranges are water and termite resistant and suit kitchens, wash areas and covered balconies, but are not a facade-grade exterior product. For open-air facades, ask about the aluminium and WPC options on the cladding range."}},
+{"@type":"Question","name":"What's the difference between Super Matt and Surface Matters?","acceptedAnswer":{"@type":"Answer","text":"Super Matt is a bendable polymer laminate in 24 solid colours for shutter edges and 180-degree wraps. Surface Matters is the full decorative book of 464 designs for everything else."}},
+{"@type":"Question","name":"What's the difference between Woodvents and Groove in Wood?","acceptedAnswer":{"@type":"Answer","text":"Both are reeded panels, but Woodvents cuts a deeper, wider-pitched groove for full-height walls, while Groove in Wood is a tighter, shallower reed closer to traditional beadboard."}},
+{"@type":"Question","name":"What is the Mineral Composite Sheet (MCS)?","acceptedAnswer":{"@type":"Answer","text":"A flat 1.5mm sheet matching the Snazzy and Trendy louvre finishes, used to fill flat wall sections between fluted panels."}},
+{"@type":"Question","name":"How long from order to delivery?","acceptedAnswer":{"@type":"Answer","text":"Stock profiles ship within 3-7 working days within Kolkata. Custom colours and larger production runs carry a 2-4 week lead time."}}
+]}]}
+</script>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+document.querySelectorAll('.ask').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.getElementById('q_material').value=btn.dataset.material;
+    document.getElementById('quote').scrollIntoView({behavior:'smooth'});
+    setTimeout(function(){ document.getElementById('q_name').focus(); },650);
+  });
+});
+
+(function(){
+  var p=new URLSearchParams(location.search);
+  function set(id,k){ var el=document.getElementById(id); if(el) el.value=p.get(k)||''; }
+  set('f_gclid','gclid'); set('f_source','utm_source'); set('f_campaign','utm_campaign'); set('f_term','utm_term');
+})();
+
+(function(){
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#inquiry-form', formId: 'mojzoogz' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>

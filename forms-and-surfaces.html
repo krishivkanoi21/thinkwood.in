@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ==========================================================================
+     THINKWOOD — FORMS + SURFACES LANDING PAGE
+     Same tokens, layout and component system as cladding.html / decking.html /
+     highlighters.html.
+
+     Six real product lines, named and counted from the supplier photo sets in
+     "thinkwood/product pics": Bonded Metal, Fused Metal, Elevator Interiors,
+     ViviGraphix Gradiance Glass, ViviTela Mesh Glass and Solid Wood Surfaces.
+
+     CATALOGUES: real Forms+Surfaces documents are wired to seven of the eight cards, and
+     the specs on those seven come from them. STILL MISSING: no catalogue for Solid Wood
+     Surfaces - that card has no download button at all until one is supplied, and its specs
+     are still counted from the supplied photography rather than a document.
+     ========================================================================== -->
+
+<title>Lift Interiors, Bonded Metal &amp; Architectural Glass in Kolkata | Thinkwood Decorative Woods</title>
+<meta name="description" content="Forms + Surfaces at Thinkwood — bonded metal, fused metal, elevator interiors, ViviGraphix and ViviTela architectural glass and carved solid wood surfaces, supplied and installed across Kolkata and eastern India.">
+<link rel="canonical" href="https://thinkwood.in/forms-and-surfaces.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Forms + Surfaces | Thinkwood Decorative Woods">
+<meta property="og:description" content="Bonded metal, fused metal, lift interiors and architectural glass — specialist architectural surfaces supplied and installed across Kolkata and eastern India.">
+<meta property="og:url" content="https://thinkwood.in/forms-and-surfaces.html">
+<meta name="theme-color" content="#FAFAF6">
+<link rel="icon" href="favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===== tokens — identical to thinkwood.in ===== */
+:root{
+  --cream:#F5EFE4; --bark:#2E1F0F; --oak:#7A5630; --sand:#C9A97A;
+  --moss:#3D4A30; --light:#FAFAF6; --gold:#A67C3A; --offwhite:#F0EAE0;
+  --rule:rgba(122,86,48,0.18);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --gut:clamp(1.25rem,5vw,5rem);
+  --maxw:1240px;
+  --mm:22px;
+}
+@media (max-width:760px){ :root{ --mm:13px; } }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--light); color:var(--bark);
+  font-family:'Jost',sans-serif; font-weight:300; font-size:16px; line-height:1.7;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:1.5px solid var(--oak);outline-offset:3px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--bark);margin:0}
+h1{font-size:clamp(2.4rem,5.2vw,4.4rem);line-height:1.08}
+h1 em,h2 em{font-style:italic;color:var(--oak)}
+h2{font-size:clamp(2rem,3.2vw,3rem);line-height:1.15}
+h3{font-family:'Jost',sans-serif;font-weight:500;font-size:1.02rem;line-height:1.4;margin:0;letter-spacing:.01em}
+
+.sec-tag{
+  font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  margin:0 0 1.4rem;display:flex;align-items:center;gap:.8rem;font-weight:400;
+}
+.sec-tag::before{content:'';display:block;width:2.4rem;height:1px;background:var(--gold)}
+.lede{font-size:.98rem;line-height:1.85;color:rgba(46,31,15,.72);max-width:58ch;font-weight:300}
+
+/* ===== buttons — site style ===== */
+.btn-primary,.btn-secondary{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:'Jost',sans-serif;font-size:.74rem;font-weight:400;
+  letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+  padding:.85rem 2rem;border:1px solid transparent;cursor:pointer;transition:all .25s;
+}
+.btn-primary{background:var(--bark);color:var(--cream)}
+.btn-primary:hover{background:var(--oak)}
+.btn-secondary{border-color:var(--oak);color:var(--oak);background:transparent}
+.btn-secondary:hover{background:var(--oak);color:var(--light)}
+.btn-sm{padding:.6rem 1.3rem;font-size:.66rem}
+
+/* ===== nav ===== */
+#navbar{
+  position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:2rem;
+  padding:.65rem var(--gut);background:rgba(250,250,246,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.logo-img{height:52px;object-fit:contain}
+.nav-links{display:flex;gap:2.2rem;list-style:none;margin:0 0 0 auto;padding:0}
+.nav-links a{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bark);text-decoration:none;opacity:.82;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav-cta{
+  font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:.55rem 1.4rem;
+  border:1px solid var(--oak);color:var(--oak);text-decoration:none;transition:all .25s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--oak);color:var(--light)}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .logo-img{height:42px}
+  #navbar{gap:1rem}
+  .nav-cta{margin-left:auto}
+}
+
+/* ===== hero ===== */
+.hero{padding:clamp(2.8rem,6vw,5rem) 0 clamp(2rem,4vw,3.4rem)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.8rem,5vw,4rem);align-items:center}
+@media (max-width:900px){ .hero-grid{grid-template-columns:1fr} }
+.hero-btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero-facts{
+  display:flex;flex-wrap:wrap;gap:.5rem 2.4rem;margin-top:2.2rem;padding-top:1.4rem;
+  border-top:1px solid var(--rule);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(46,31,15,.55);
+}
+.hero-facts b{color:var(--oak);font-weight:500}
+
+.detail{background:var(--cream);border:1px solid var(--rule);padding:1.3rem}
+.detail svg{width:100%;height:auto;display:block}
+.hero-shot img{width:100%;height:clamp(280px,34vw,420px);object-fit:cover;object-position:center 50%;display:block}
+.detail figcaption{
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+  margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--rule);
+}
+.dr{opacity:0;animation:drIn .8s var(--ease) forwards}
+@keyframes drIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+
+/* ===== sections ===== */
+.sec{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--rule)}
+.sec--cream{background:var(--cream)}
+.sec-head{max-width:62ch;margin-bottom:2.6rem}
+.sec-head p{margin:1rem 0 0}
+
+/* ===== material cards ===== */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media (max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:620px){ .grid{grid-template-columns:1fr} }
+
+.pcard{background:var(--light);border:1px solid var(--rule);display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s,transform .25s}
+.pcard:hover{border-color:var(--sand);transform:translateY(-3px)}
+.pcard-media{position:relative;aspect-ratio:4/3;background:var(--offwhite);overflow:hidden}
+.pcard-media img{width:100%;height:100%;object-fit:cover;position:relative;z-index:2}
+.pcard-media svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.pcard-tag{position:absolute;top:.8rem;left:.8rem;z-index:3;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream);background:rgba(46,31,15,.68);padding:.32rem .7rem}
+.pcard-body{padding:1.4rem 1.4rem 1.5rem;display:flex;flex-direction:column;flex:1}
+.pcard-body p{margin:.7rem 0 0;font-size:.86rem;line-height:1.75;color:rgba(46,31,15,.66)}
+.specs{list-style:none;margin:1.2rem 0 1.4rem;padding:1rem 0 0;border-top:1px solid var(--rule);font-size:.72rem;letter-spacing:.06em}
+.specs li{display:flex;justify-content:space-between;gap:1rem;padding:.24rem 0;color:rgba(46,31,15,.55);text-transform:uppercase}
+.specs b{color:var(--oak);font-weight:500;text-align:right;text-transform:none;letter-spacing:.02em}
+.pcard-foot{margin-top:auto;display:flex;align-items:stretch;gap:.6rem;flex-wrap:wrap}
+.dl-link{display:inline-flex;align-items:center;gap:.45rem;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--oak);text-decoration:none;padding:.6rem 1.1rem;border:1px solid var(--rule);background:transparent;transition:border-color .25s,background .25s,color .25s}
+.dl-link:hover{border-color:var(--oak);background:var(--oak);color:var(--light)}
+.dl-link svg{width:13px;height:13px;fill:currentColor;flex:0 0 13px}
+.check-row{display:flex;align-items:flex-start;gap:.7rem;padding:.9rem 0 .2rem}
+.check-row input{width:16px;height:16px;flex:0 0 16px;margin:.18rem 0 0;accent-color:var(--sand)}
+.check-row label{font-size:.82rem;color:rgba(245,239,228,.72);line-height:1.6;letter-spacing:0;text-transform:none;margin:0;cursor:pointer}
+
+/* ===== portfolio (drawn placeholders — swap for real photography) ===== */
+.sec--off{background:var(--offwhite)}
+.port-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+.port-item{position:relative;overflow:hidden;background:#1a1206;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.port-item:hover{transform:translateY(-3px);box-shadow:0 22px 50px -28px rgba(20,12,4,.45)}
+.port-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+.port-item:hover img{transform:scale(1.045)}
+.port-label{position:absolute;bottom:0;left:0;right:0;padding:.85rem 1.1rem;background:linear-gradient(to top,rgba(20,12,4,.9),transparent);color:var(--cream);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.port-item:hover .port-label{opacity:1}
+.pw{grid-column:span 6;height:340px}
+.pt{grid-column:span 4;height:340px}
+@media (max-width:900px){
+  .port-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .pw{grid-column:span 2;height:230px}
+  .pt{grid-column:span 1;height:230px}
+  .port-label{font-size:.62rem}
+}
+@media (max-width:520px){
+  .port-grid{grid-template-columns:1fr}
+  .pw{grid-column:span 1;height:220px}
+  .pt{grid-column:span 1;height:220px}
+}
+
+/* ===== steps ===== */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1.4rem}
+@media (max-width:980px){ .steps{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:520px){ .steps{grid-template-columns:1fr} }
+.step{border-top:1px solid var(--bark);padding-top:1rem}
+.step-n{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--sand);line-height:1}
+.step h3{margin:.5rem 0 .5rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+.step p{margin:0;font-size:.82rem;line-height:1.7;color:rgba(46,31,15,.62)}
+
+/* ===== faq ===== */
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:1.15rem 2.4rem 1.15rem 0;position:relative;font-size:.95rem;font-weight:400}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:.3rem;top:1rem;font-size:1.2rem;color:var(--oak);font-weight:300}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 1.3rem;color:rgba(46,31,15,.66);font-size:.88rem;line-height:1.85;max-width:72ch}
+
+/* ===== quote ===== */
+.quote{background:var(--bark);color:var(--cream);border-top:0}
+.quote h2{color:var(--cream)}
+.quote h2 em{color:var(--sand)}
+.quote .sec-tag{color:var(--sand)}
+.quote .sec-tag::before{background:var(--sand)}
+.quote-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4.5rem)}
+@media (max-width:880px){ .quote-grid{grid-template-columns:1fr} }
+.quote-aside p{color:rgba(245,239,228,.6);font-size:.9rem;line-height:1.85}
+
+.contact-rows{margin-top:2rem;display:flex;flex-direction:column}
+.crow-link{
+  display:flex;align-items:center;gap:.95rem;padding:.85rem 0;text-decoration:none;
+  border-bottom:1px solid rgba(245,239,228,.1);color:rgba(245,239,228,.78);font-size:.88rem;transition:color .2s;
+}
+.crow-link:hover{color:#fff}
+.crow-link .ico{width:34px;height:34px;flex:0 0 34px;border-radius:50%;display:grid;place-items:center}
+.crow-link .lbl{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,239,228,.42);display:block;margin-bottom:.15rem}
+.ico-wa{background:#25D366}
+.ico-fb{background:#1877F2}
+.ico-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.ico-call{background:var(--moss)}
+.ico svg{width:17px;height:17px;fill:#fff}
+
+/* ===== form ===== */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.full{grid-column:1/-1}
+@media (max-width:560px){ .form{grid-template-columns:1fr} }
+.field label{display:block;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,239,228,.45);margin-bottom:.45rem}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'Jost',sans-serif;font-weight:300;font-size:.9rem;color:var(--cream);
+  background:transparent;border:1px solid rgba(245,239,228,.2);padding:.72rem .8rem;border-radius:0;
+}
+.field textarea{resize:vertical;min-height:92px}
+.field select option{color:var(--bark)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--sand);outline:none}
+.form .btn-primary{background:var(--sand);color:var(--bark);justify-content:center;width:100%}
+.form .btn-primary:hover{background:var(--cream)}
+.consent{font-size:.68rem;color:rgba(245,239,228,.35);margin:.5rem 0 0;letter-spacing:.06em}
+[data-fs-success],[data-fs-error]{grid-column:1/-1;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 0}
+[data-fs-success]{color:var(--sand)}
+[data-fs-error]{color:#D89B9B}
+
+/* ===== footer — mirrors thinkwood.in ===== */
+.footer-main{background:#1a0e05;padding:4rem 5rem 2rem;box-sizing:border-box;display:flex;flex-direction:column}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem;width:100%;align-items:start}
+.footer-three-cols{display:contents}
+.footer-logo-img{height:52px;object-fit:contain;margin-bottom:1.2rem}
+.footer-brand-desc{font-size:0.82rem;color:rgba(245,239,228,0.55);line-height:1.75;max-width:240px;margin-bottom:1.5rem}
+.footer-socials{display:flex;gap:0.75rem}
+.footer-social-btn{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.25s;flex-shrink:0;border:1px solid rgba(245,239,228,0.2)}
+.footer-social-btn svg{width:17px;height:17px;fill:rgba(245,239,228,.75);transition:fill .25s}
+.footer-social-btn:hover{border-color:transparent}
+.footer-social-btn:hover svg{fill:#fff}
+.footer-social-btn.wa:hover{background:#25D366}
+.footer-social-btn.fb:hover{background:#1877F2}
+.footer-social-btn.ig:hover{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.footer-social-btn.call:hover{background:var(--moss)}
+.footer-col-title{font-size:0.65rem;letter-spacing:0.26em;text-transform:uppercase;color:#C4956C;margin-bottom:1.4rem}
+.footer-col-links{display:flex;flex-direction:column;gap:0.75rem}
+.footer-col-links a{font-size:0.84rem;color:rgba(245,239,228,0.65);text-decoration:none;transition:color 0.2s}
+.footer-col-links a:hover{color:#fff}
+.footer-visit-item{font-size:0.84rem;color:rgba(245,239,228,0.65);line-height:1.7;margin:0 0 0.5rem}
+.footer-visit-item a{color:rgba(245,239,228,0.65);text-decoration:none;transition:color 0.2s}
+.footer-visit-item a:hover{color:#fff}
+.footer-bottom-bar{border-top:1px solid rgba(245,239,228,0.08);padding:1.2rem 0 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;width:100%;margin-top:auto}
+.footer-copy,.footer-location{font-size:0.72rem;color:rgba(245,239,228,0.3);letter-spacing:0.06em;margin:0}
+@media (max-width:900px){
+  .footer-main{padding:3rem 2rem 2rem}
+  .footer-grid{grid-template-columns:1fr;gap:1.5rem}
+  .footer-three-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem}
+  .footer-col-links a{font-size:0.75rem}
+  .footer-col-title{font-size:0.6rem;margin-bottom:0.6rem}
+  .footer-visit-item{font-size:0.75rem}
+}
+@media (max-width:520px){ .footer-main{padding:2.5rem 1.25rem 1.5rem} }
+
+/* ===== whatsapp float ===== */
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:80;width:54px;height:54px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(26,14,5,.28)}
+.wa-fab svg{width:28px;height:28px;fill:#fff}
+
+/* ===== reveal ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .dr{opacity:1}
+}
+
+/* ===== breadcrumb / back to site ===== */
+.crumb{background:var(--cream);border-bottom:1px solid var(--rule)}
+.crumb-in{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;
+  padding:.6rem 0;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase}
+.crumb a{color:var(--oak);text-decoration:none;display:inline-flex;align-items:center;gap:.45rem;transition:opacity .2s}
+.crumb a:hover{opacity:.65}
+.crumb a svg{width:11px;height:11px;fill:currentColor}
+.crumb .sep{color:rgba(46,31,15,.28)}
+.crumb .here{color:rgba(46,31,15,.5)}
+@media (max-width:520px){ .crumb-in{font-size:.62rem;letter-spacing:.12em} }
+
+/* ===== sticky top bar ===== */
+/* nav + breadcrumb travel together, so "Back to Thinkwood" stays reachable from anywhere on the page */
+.topbar{position:sticky;top:0;z-index:60}
+.topbar #navbar{position:static}
+section[id]{scroll-margin-top:132px}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<div class="topbar">
+<nav id="navbar">
+  <ul class="nav-links">
+    <li><a href="#materials">Materials</a></li>
+    <li><a href="#work">Our Work</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#quote" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="crumb">
+  <div class="wrap crumb-in">
+    <a href="https://thinkwood.in/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/></svg>Back to Thinkwood</a>
+    <span class="sep">/</span>
+    <a href="https://thinkwood.in/#products">All Products</a>
+    <span class="sep">/</span>
+    <span class="here">Forms + Surfaces</span>
+  </div>
+</div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="sec-tag">Forms + Surfaces — Kolkata</p>
+      <h1>Metal, glass and wood.<br><em>Made architectural.</em></h1>
+      <p class="lede" style="margin-top:1.4rem">
+        The specialist end of what we do — cast bonded metal, fused metal sheet, patterned lift
+        interiors, decorative architectural glass and carved solid wood. These are the finishes
+        that turn a lobby wall, a lift car or an entrance door into the thing people actually
+        remember about a building.
+      </p>
+      <div class="hero-btns">
+        <a href="#quote" class="btn-primary">Get Rates &amp; Samples</a>
+        <a href="#materials" class="btn-secondary">See The Range</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>8</b> · product lines</div>
+        <div><b>Made to size</b> · cars, doors, walls</div>
+        <div><b>Supply + install</b> · one party</div>
+      </div>
+    </div>
+
+    <figure class="detail hero-shot" style="margin:0">
+      <img src="images/forms-surfaces/hero-forms-surfaces.jpg" alt="Backlit corridor wall clad in cast bonded metal">
+      <figcaption>Bonded Metal — Backlit Corridor Feature Wall</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== MATERIALS ===== -->
+<section class="sec sec--cream" id="materials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">01 — The Range</p>
+      <h2>Eight surfaces,<br><em>one specialist division.</em></h2>
+      <p class="lede">Everything here is made to your sizes rather than pulled off a stack — a door
+        leaf, a lift car, a partition or a wall elevation. Shop drawings are signed off before
+        anything is fabricated, and a physical sample of the exact pattern and finish comes first.</p>
+    </div>
+
+    <div class="grid" id="cardGrid">
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Lifts</span>
+          <img src="images/forms-surfaces/card-elevator-interiors.jpg" alt="Lift cabin finished in bronze metal with a backlit onyx panel" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Elevator Interiors</h3>
+          <p>Complete lift car interiors built on the LEVELe and LEVELc systems &mdash; walls, ceilings, handrails and door skins &mdash; finished in bonded metal, bonded quartz, fused metal, wood veneer or laminated glass. Made to your existing car and door sizes, so a modernisation takes days rather than the weeks a full car replacement needs.</p>
+          <ul class="specs">
+            <li>Systems <b>LEVELe &amp; LEVELc</b></li>
+            <li>Surfaces <b>Metal, quartz, veneer, glass</b></li>
+            <li>Scope <b>Cabin, ceiling, handrails, doors</b></li>
+            <li>Use <b>New lifts &amp; modernisation</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Elevator Interiors">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-elevator-interiors.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Metal</span>
+          <img src="images/forms-surfaces/card-bonded-metal.jpg" alt="Bonded metal panel in a cast Taos relief, bronze dark patina" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Bonded Metal</h3>
+          <p>Metal granules cast into a tough FRP matrix, so the face is real aluminium, bronze or nickel silver on a panel light enough to hang on a lift car or a door leaf. The moulds reproduce every detail of the original pattern — from the fine linear Rhone and Glint to the deeply sculpted Taos, Corona and Solstice reliefs.</p>
+          <ul class="specs">
+            <li>Patterns <b>25+ cast profiles</b></li>
+            <li>Colours <b>Aluminium, bronze, nickel silver</b></li>
+            <li>Patinas <b>Natural &amp; dark</b></li>
+            <li>Sheet size <b>1219 × 3048 mm</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Bonded Metal">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-bonded-metal.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Composite</span>
+          <img src="images/forms-surfaces/card-bonded-quartz.jpg" alt="Bonded Quartz panels in white with a sculpted wave relief" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Bonded Quartz</h3>
+          <p>Ceramic microspheres cast into a fibre-reinforced polymer — a bright, deeply sculptural
+            surface that stays light, holds fine relief and wipes clean. Standard in Bonded White and
+            Bonded Charcoal, in patterns running from the soft Dune and Sahara to the faceted Kalahari,
+            Crinkle and Waterfall.</p>
+          <ul class="specs">
+            <li>Patterns <b>14 white / 9 charcoal</b></li>
+            <li>Colours <b>Bonded white &amp; charcoal</b></li>
+            <li>Thickness <b>3.2 – 3.7 mm</b></li>
+            <li>Sheet size <b>Up to 1219 × 3048 mm</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Bonded Quartz">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-bonded-quartz.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Doors</span>
+          <img src="images/forms-surfaces/card-bonded-metal-doors.jpg" alt="Bronze bonded metal double doors in a marble lobby" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Bonded Metal Doors</h3>
+          <p>Entrance and feature doors faced in Bonded Metal or Bonded Quartz — the full pattern and
+            colour range cast onto a door leaf, so an entryway reads as bespoke metalwork without the
+            bespoke price. Matching sheet goods carry the same pattern onto the walls and lift
+            interiors around it.</p>
+          <ul class="specs">
+            <li>Faces <b>Bonded metal or quartz</b></li>
+            <li>Patterns <b>Full pattern range</b></li>
+            <li>Colours <b>Aluminium, bronze, nickel silver</b></li>
+            <li>Use <b>Entrances &amp; feature doors</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Bonded Metal Doors">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-bonded-metal-doors.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Metal</span>
+          <img src="images/forms-surfaces/card-fused-metal.jpg" alt="Fused metal sheet in the Circle pattern, copper finish" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Fused Metal</h3>
+          <p>Colour-fused stainless steel — titanium alloys vapour-deposited onto a stainless substrate at molecular level, so the colour is part of the metal rather than a coating over it. Fused Bronze, Graphite, Nickel Silver, Nickel Bronze and White Gold, in satin and mirror plus the high-durability Sandstone, Seastone and Linen finishes.</p>
+          <ul class="specs">
+            <li>Colours <b>5 fused tones</b></li>
+            <li>Finishes <b>Satin, mirror, textured</b></li>
+            <li>Thickness <b>0.8 &amp; 1.5 mm</b></li>
+            <li>Patterning <b>Impression, Eco-Etch, Fusion</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Fused Metal">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-fused-metal.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Glass</span>
+          <img src="images/forms-surfaces/card-vivigraphix-glass.jpg" alt="ViviGraphix Gradiance glass in the Ascension pattern used as a partition" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>ViviGraphix Gradiance Glass</h3>
+          <p>Colour, gradient and image laminated into the interlayer between two lites of glass rather than printed onto the face, so the artwork cannot scratch or fade off. Specify View to pass light through, or Reflect against a mirrored backer — in any Pantone, Benjamin Moore or Sherwin-Williams colour.</p>
+          <ul class="specs">
+            <li>Configurations <b>View &amp; Reflect</b></li>
+            <li>Interlayers <b>Single &amp; dual</b></li>
+            <li>Translucency <b>6 LumiLevels</b></li>
+            <li>Colour <b>Any Pantone match</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="ViviGraphix Gradiance Glass">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-vivigraphix-gradiance-glass.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Glass</span>
+          <img src="images/forms-surfaces/card-vivitela-mesh-glass.jpg" alt="ViviTela mesh glass with an Overlay weave in nickel silver" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>ViviTela Mesh Glass</h3>
+          <p>Woven metal mesh laminated into glass at a micro scale — Pointed Twill, Twill, Overlay, Oxford and Framework weaves in stainless steel, bronze, graphite, nickel bronze, nickel silver and white gold. The weave is sealed inside the panel, so it cleans like plain glass.</p>
+          <ul class="specs">
+            <li>Patterns <b>5 weaves</b></li>
+            <li>Metals <b>6 finishes</b></li>
+            <li>Configurations <b>View &amp; Reflect</b></li>
+            <li>Orientation <b>Vertical or horizontal</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="ViviTela Mesh Glass">Get Rate</button><a class="dl-link" href="catalogues/thinkwood-vivitela-mesh-glass.pdf" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>Catalogue</a></div>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-media">
+          <span class="pcard-tag">Wood</span>
+          <img src="images/forms-surfaces/card-solid-wood-surfaces.jpg" alt="Solid wood surface panel machined in the CWP-06 Current wave profile" loading="lazy">
+        </div>
+        <div class="pcard-body">
+          <h3>Solid Wood Surfaces</h3>
+          <p>Solid timber machined into three-dimensional relief — eight carved CWP patterns from the woven Lattice and faceted Prism to the graphic Meridian, and seven fluted FWP profiles from the fine Bead and Reed to the deep Castellate and rippled Ripple.</p>
+          <ul class="specs">
+            <li>Patterns <b>15</b></li>
+            <li>Carved (CWP) <b>8</b></li>
+            <li>Fluted (FWP) <b>7</b></li>
+            <li>Use <b>Feature walls, ceilings, joinery</b></li>
+          </ul>
+          <div class="pcard-foot"><button class="btn-secondary btn-sm ask" data-material="Solid Wood Surfaces">Get Rate</button></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section class="sec sec--off" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">02 — Our Work</p>
+      <h2>Lobbies, lifts<br><em>and entrance doors.</em></h2>
+      <p class="lede">Reference installations from the Forms+Surfaces collection — lift lobbies,
+        surrounds and entrance doors — alongside lift cabins we have finished ourselves in Kolkata.</p>
+    </div>
+    <div class="port-grid reveal">
+      <div class="port-item pw">
+        <img src="images/forms-surfaces/work-bonded-lift-lobby.jpg" alt="Lift lobby with doors faced in bonded metal" loading="lazy">
+        <span class="port-label">Bonded Metal — Lift Lobby</span>
+      </div>
+      <div class="port-item pw">
+        <img src="images/forms-surfaces/work-bonded-elevator-surround.jpg" alt="Bank of lifts with bonded metal surrounds and doors" loading="lazy">
+        <span class="port-label">Bonded Metal — Lift Surrounds</span>
+      </div>
+      <div class="port-item pt">
+        <img src="images/forms-surfaces/work-bonded-entrance.jpg" alt="Building entrance wall clad in dark bonded metal" loading="lazy">
+        <span class="port-label">Bonded Metal — Building Entrance</span>
+      </div>
+      <div class="port-item pt">
+        <img src="images/forms-surfaces/work-gradiance-wall.jpg" alt="Interior glazed wall in ViviGraphix Gradiance glass" loading="lazy">
+        <span class="port-label">Gradiance Glass — Glazed Wall</span>
+      </div>
+      <div class="port-item pt">
+        <img src="images/forms-surfaces/work-lift-onyx-brass.jpg" alt="Lift cabin finished in brass with a backlit onyx rear panel" loading="lazy">
+        <span class="port-label">Lift Cabin — Kolkata</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">03 — How It Runs</p>
+      <h2>Enquiry to <em>installed finish.</em></h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="step-n">01</div><h3>Send The Sizes</h3><p>Lift car and door leaf sizes, or the wall elevation you want faced.</p></div>
+      <div class="step"><div class="step-n">02</div><h3>Finish Board</h3><p>Physical metal, glass and wood samples — within 24 hours in Kolkata.</p></div>
+      <div class="step"><div class="step-n">03</div><h3>Shop Drawings</h3><p>Panel setting-out, joint lines and fixing details signed off before fabrication.</p></div>
+      <div class="step"><div class="step-n">04</div><h3>Fabrication</h3><p>Cut, formed and finished to your sizes — sheet, door skin or cabin panel.</p></div>
+      <div class="step"><div class="step-n">05</div><h3>Installation</h3><p>Our own fit-out crew, so material and workmanship sit with one party.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec sec--cream" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">04 — Straight Answers</p>
+      <h2>Questions we get <em>every week.</em></h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>What exactly is Bonded Metal?</summary><p>Metal granules cast into a tough fibre-reinforced polymer matrix, so the face is genuine aluminium, bronze or nickel silver — it patinas, it feels cold to the touch, and it can be refinished — but the panel weighs a fraction of solid plate. That weight difference is what makes it viable on a lift car door or a hung wall panel where sheet metal would be too heavy and too flat.</p></details>
+      <details><summary>How is Bonded Quartz different from Bonded Metal?</summary><p>Same casting process and the same sculptural relief, but the filler is ceramic microspheres rather than metal granules. That gives you a bright white or charcoal surface instead of a metal one, at a similar weight, and it wipes clean — which is why it tends to get specified for hospitals, hotels and pool halls.</p></details>
+      <details><summary>Can you re-skin an existing lift?</summary><p>Yes, and it's most of this work. Door skins and cabin panels are made to your existing car and door sizes and fixed over what's already there, so the lift is out of service for days rather than the weeks a full car replacement takes.</p></details>
+      <details><summary>Is the decorative glass structural?</summary><p>It's laminated glass, so it gets specified like any other laminated architectural glass — partitions, doors, balustrades and screens. Send us the opening size and what it's doing and we'll confirm the make-up and thickness for that application.</p></details>
+      <details><summary>How do the metal finishes age?</summary><p>Dark and patina finishes are applied chemically, so they're part of the surface rather than a coating sitting on top — they can be touched up in place if a panel gets marked. Natural finishes will keep developing their own patina over time unless they're sealed, which some clients specifically want.</p></details>
+      <details><summary>Are these stocked or made to order?</summary><p>Made to order against your sizes and chosen pattern, so lead time depends on the range and the quantity. You'll get a date in writing before the order is released rather than an estimate that moves.</p></details>
+      <details><summary>Do you supply only, or install as well?</summary><p>Both. Most clients take supply plus installation through our own fit-out crew so material and workmanship stay with one party. Supply-only is available if your contractor is already appointed.</p></details>
+      <details><summary>Can we see the material before ordering?</summary><p>Yes. Visit the Experience Centre at 13C Paul Mansions, 6 Bishop Lefroy Road, Mon–Sat 10 AM to 7 PM, to handle the metal, glass and wood samples in person. Call ahead so we can set aside time and pull the patterns you're interested in.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUOTE ===== -->
+<section class="sec quote" id="quote">
+  <div class="wrap quote-grid">
+    <div class="quote-aside">
+      <p class="sec-tag">Enquiry</p>
+      <h2>Send the drawing.<br><em>Get a rate.</em></h2>
+      <p>A lift car size, a door schedule or a wall elevation is enough to start. We'll come back
+        with finish options, an indicative rate and physical samples.</p>
+
+      <div class="contact-rows">
+        <a class="crow-link" href="https://wa.me/919830020010?text=Hi%20Thinkwood%2C%20I%27m%20looking%20at%20Forms%20%2B%20Surfaces%20%E2%80%94%20bonded%20metal%2C%20lift%20interiors%20or%20architectural%20glass." target="_blank" rel="noopener">
+          <span class="ico ico-wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg></span>
+          <span><span class="lbl">WhatsApp</span>Message us — fastest reply</span>
+        </a>
+        <a class="crow-link" href="tel:+919830020010">
+          <span class="ico ico-call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
+          <span><span class="lbl">Call</span>+91 98300 20010</span>
+        </a>
+        <a class="crow-link" href="https://www.instagram.com/thinkwood.in/" target="_blank" rel="noopener">
+          <span class="ico ico-ig"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 00-2.13 1.38A5.9 5.9 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 002.13-1.38 5.9 5.9 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 00-1.38-2.13A5.9 5.9 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg></span>
+          <span><span class="lbl">Instagram</span>@thinkwood.in</span>
+        </a>
+        <a class="crow-link" href="https://www.facebook.com/thinkwoodofficial/" target="_blank" rel="noopener">
+          <span class="ico ico-fb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.5c-1.48 0-1.94.92-1.94 1.87v2.25h3.3l-.53 3.49h-2.77v8.44C19.61 23.1 24 18.1 24 12.07z"/></svg></span>
+          <span><span class="lbl">Facebook</span>Thinkwood Official</span>
+        </a>
+        <a class="crow-link" href="https://maps.google.com/?q=13C+Paul+Mansions+6+Bishop+Lefroy+Road+Kolkata+700020" target="_blank" rel="noopener">
+          <span class="ico" style="background:var(--oak)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1114.5 9 2.5 2.5 0 0112 11.5z"/></svg></span>
+          <span><span class="lbl">Experience Centre</span>13C Paul Mansions, Bishop Lefroy Rd</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div data-fs-success style="display:none">Sent — we'll be in touch shortly.</div>
+      <div data-fs-error style="display:none"></div>
+
+      <form id="inquiry-form" class="form">
+        <input type="hidden" name="_subject" value="Forms + Surfaces enquiry — thinkwood.in">
+        <input type="hidden" name="gclid" id="f_gclid">
+        <input type="hidden" name="utm_source" id="f_source">
+        <input type="hidden" name="utm_campaign" id="f_campaign">
+        <input type="hidden" name="utm_term" id="f_term">
+        <input type="hidden" name="landing_page" value="forms-and-surfaces">
+
+        <div class="field"><label for="q_name">Your Name</label><input id="q_name" type="text" name="name" data-fs-field required autocomplete="name"></div>
+        <div class="field"><label for="q_phone">Phone</label><input id="q_phone" type="tel" name="phone" data-fs-field required autocomplete="tel" inputmode="tel"></div>
+        <div class="field"><label for="q_email">Email</label><input id="q_email" type="email" name="email" data-fs-field autocomplete="email"></div>
+        <div class="field"><label for="q_city">Project Location</label><input id="q_city" type="text" name="location" data-fs-field placeholder="Kolkata, Siliguri, Guwahati…"></div>
+        <div class="field"><label for="q_material">Product Of Interest</label>
+          <select id="q_material" name="material" data-fs-field>
+            <option value="">Not sure yet — advise me</option>
+            <option>Elevator Interiors</option>
+            <option>Bonded Metal</option>
+            <option>Bonded Quartz</option>
+            <option>Bonded Metal Doors</option>
+            <option>Fused Metal</option>
+            <option>ViviGraphix Gradiance Glass</option>
+            <option>ViviTela Mesh Glass</option>
+            <option>Solid Wood Surfaces</option>
+          </select>
+        </div>
+        <div class="field"><label for="q_area">Approx Area (sq ft)</label><input id="q_area" type="text" name="area" data-fs-field inputmode="numeric" placeholder="e.g. 300"></div>
+        <div class="field full"><label for="q_msg">What Are You Finishing?</label><textarea id="q_msg" name="message" data-fs-field placeholder="Two lift cars and a lobby entrance door, work starting next month."></textarea></div>
+        <div class="full check-row">
+          <input type="checkbox" id="q_cat" name="send_catalogues" value="Yes — send the full Forms + Surfaces catalogue set">
+          <label for="q_cat">Email me the full catalogue set (all 8 ranges, PDF)</label>
+        </div>
+        <div class="full">
+          <button type="submit" class="btn-primary" data-fs-submit-btn>Send Inquiry</button>
+          <p class="consent">We'll only use this to answer your enquiry.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer-main">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <p class="footer-brand-desc">Premium exterior and interior building materials for architects, designers, developers and homeowners across Kolkata and eastern India.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/thinkwood.in/" target="_blank" rel="noopener" class="footer-social-btn ig" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 00-2.13 1.38A5.9 5.9 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 002.13-1.38 5.9 5.9 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 00-1.38-2.13A5.9 5.9 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg>
+        </a>
+        <a href="https://www.facebook.com/thinkwoodofficial/" target="_blank" rel="noopener" class="footer-social-btn fb" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.5c-1.48 0-1.94.92-1.94 1.87v2.25h3.3l-.53 3.49h-2.77v8.44C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </a>
+        <a href="https://wa.me/919830020010" target="_blank" rel="noopener" class="footer-social-btn wa" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+        </a>
+        <a href="tel:+919830020010" class="footer-social-btn call" aria-label="Call us">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-three-cols">
+      <div>
+        <p class="footer-col-title">Explore</p>
+        <div class="footer-col-links">
+          <a href="https://thinkwood.in/#products">What we offer</a>
+          <a href="https://thinkwood.in/#portfolio">Projects</a>
+          <a href="https://thinkwood.in/#why">Why Thinkwood</a>
+          <a href="https://thinkwood.in/#contact">Experience Centre</a>
+          <a href="#quote">Get a quote</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Products</p>
+        <div class="footer-col-links">
+          <a href="cladding.html">Cladding</a>
+          <a href="decking.html">Decking</a>
+          <a href="laminates-and-louvres.html">Laminates &amp; louvres</a>
+          <a href="highlighters.html">Highlighters</a>
+          <a href="flooring.html">Flooring</a>
+          <a href="forms-and-surfaces.html">Forms + Surfaces</a>
+          <a href="outdoor-landscaping-products.html">Outdoor landscaping</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Visit</p>
+        <p class="footer-visit-item">13C Paul Mansions, 1st Floor<br>6 Bishop Lefroy Road<br>Kolkata 700020</p>
+        <p class="footer-visit-item"><a href="tel:+919830020010">+91 98300 20010</a></p>
+        <p class="footer-visit-item"><a href="mailto:thinkwood.ashish@gmail.com">thinkwood.ashish@gmail.com</a></p>
+        <p class="footer-visit-item">Mon – Sat · 10 AM to 7 PM</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom-bar">
+    <p class="footer-copy">© <span id="yr"></span> Thinkwood Decorative Woods. All rights reserved.</p>
+    <p class="footer-location">Kolkata, West Bengal, India</p>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/919830020010?text=Hi%20Thinkwood%2C%20I%27m%20looking%20at%20Forms%20%2B%20Surfaces%20%E2%80%94%20bonded%20metal%2C%20lift%20interiors%20or%20architectural%20glass." aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","name":"Bonded Metal, Bonded Quartz, Lift Interiors and Architectural Glass Supply and Installation","serviceType":"Bonded metal, bonded quartz, fused metal, elevator interiors, decorative architectural glass and solid wood surfaces","areaServed":[{"@type":"City","name":"Kolkata"},{"@type":"State","name":"West Bengal"}],"provider":{"@type":"LocalBusiness","name":"Thinkwood Decorative Woods","telephone":"+91-98300-20010","email":"thinkwood.ashish@gmail.com","url":"https://thinkwood.in","address":{"@type":"PostalAddress","streetAddress":"13C Paul Mansions, 6 Bishop Lefroy Road","addressLocality":"Kolkata","addressRegion":"West Bengal","postalCode":"700020","addressCountry":"IN"}}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thinkwood.in/"},{"@type":"ListItem","position":2,"name":"Forms + Surfaces","item":"https://thinkwood.in/forms-and-surfaces.html"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What exactly is Bonded Metal?","acceptedAnswer":{"@type":"Answer","text":"Real metal powder bonded into a resin matrix and cast, so the face is genuine metal that patinas and can be refinished, but the panel weighs a fraction of solid plate — which is what makes it viable on a lift car door or a hung wall panel."}},
+{"@type":"Question","name":"Can you re-skin an existing lift?","acceptedAnswer":{"@type":"Answer","text":"Yes. Door skins and cabin panels are made to your existing car and door sizes and fixed over what is already there, so the lift is out of service for days rather than the weeks a full car replacement takes."}},
+{"@type":"Question","name":"Is the decorative glass structural?","acceptedAnswer":{"@type":"Answer","text":"It is laminated glass, specified like any other laminated architectural glass for partitions, doors, balustrades and screens. Send the opening size and the application and we will confirm the make-up and thickness."}},
+{"@type":"Question","name":"Are these stocked or made to order?","acceptedAnswer":{"@type":"Answer","text":"Made to order against your sizes and chosen pattern, so lead time depends on the range and quantity. You get a date in writing before the order is released."}}
+]}]}
+</script>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+document.querySelectorAll('.ask').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.getElementById('q_material').value=btn.dataset.material;
+    document.getElementById('quote').scrollIntoView({behavior:'smooth'});
+    setTimeout(function(){ document.getElementById('q_name').focus(); },650);
+  });
+});
+
+(function(){
+  var p=new URLSearchParams(location.search);
+  function set(id,k){ var el=document.getElementById(id); if(el) el.value=p.get(k)||''; }
+  set('f_gclid','gclid'); set('f_source','utm_source'); set('f_campaign','utm_campaign'); set('f_term','utm_term');
+})();
+
+(function(){
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#inquiry-form', formId: 'mojzoogz' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
