@@ -344,6 +344,44 @@ h3{font-family:'Jost',sans-serif;font-weight:500;font-size:1.02rem;line-height:1
 .topbar{position:sticky;top:0;z-index:60}
 .topbar #navbar{position:static}
 section[id]{scroll-margin-top:132px}
+/* ===== mobile layer ===== */
+@media (max-width:900px){
+  #navbar{padding:.4rem var(--gut);gap:.75rem}
+  .logo-img{height:36px}
+  .nav-cta{padding:.6rem 1rem;font-size:.7rem;letter-spacing:.12em}
+  .crumb-in{flex-wrap:nowrap;overflow:hidden;padding:.3rem 0;font-size:.72rem;letter-spacing:.1em;gap:.45rem}
+  .crumb-in>*{white-space:nowrap;flex-shrink:0}
+  .crumb .here{flex-shrink:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .crumb a{padding:.3rem 0}
+  section[id]{scroll-margin-top:96px}
+  /* 16px stops iPhone Safari zooming the page when a field is tapped */
+  .field input,.field select,.field textarea{font-size:16px}
+  .footer-three-cols{grid-template-columns:1fr 1fr;gap:1.6rem 1rem}
+  .footer-three-cols>div:last-child{grid-column:1/-1}
+  .footer-col-links{gap:.15rem}
+  .footer-col-links a{font-size:.9rem;padding:.4rem 0}
+  .footer-col-title{font-size:.68rem}
+  .footer-visit-item{font-size:.9rem}
+  /* leaves room so the floating WhatsApp button never covers the copyright line */
+  .footer-main{padding-bottom:6rem}
+  .port-label{opacity:1}
+}
+@media (max-width:620px){
+  .hero-btns{flex-direction:column;align-items:stretch}
+  .hero-btns a{justify-content:center}
+  .sec-tag{font-size:.74rem;letter-spacing:.2em}
+  .pcard-tag{font-size:.66rem}
+  .specs{font-size:.78rem}
+  .specs li{flex-wrap:wrap;column-gap:.75rem}
+  .specs b{margin-left:auto;min-width:0;overflow-wrap:anywhere}
+  .pcard-foot>*,.coll-foot>*{flex:1 1 0;justify-content:center;min-height:44px}
+  .btn-sm,.dl-link{font-size:.72rem}
+  .port-label{font-size:.72rem}
+  .chip{min-height:42px;font-size:.72rem}
+  .step p,.faq details p{font-size:.92rem}
+  .wa-fab{width:50px;height:50px;right:14px;bottom:14px}
+  .check-row input{width:20px;height:20px;flex:0 0 20px}
+}
 </style>
 </head>
 <body>

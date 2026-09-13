@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="icon" type="image/png" sizes="180x180" href="favicon.png"/>
   <link rel="canonical" href="https://thinkwood.in/"/>
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.png"/>
@@ -741,6 +742,23 @@ h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:1px
 
   /* no stacking context on the portrait carousel, so the card link covers the photos but stays under the arrows and dots */
   .rng-card--portrait .carousel{z-index:auto}
+
+  /* ===== mobile polish ===== */
+  @media (max-width:900px){
+    input,select,textarea{font-size:16px}
+    .nav-links a{padding:.95rem 1.25rem;font-size:.8rem}
+    .footer-three-cols{grid-template-columns:1fr 1fr;gap:1.6rem 1rem}
+    .footer-three-cols>div:last-child{grid-column:1/-1}
+    .footer-col-links a{font-size:.9rem;padding:.35rem 0}
+    .footer-visit-item{font-size:.9rem}
+    .footer-main{padding-bottom:6rem}
+    .hero-right{margin:1.25rem 1.1rem 2rem}
+  }
+  @media (max-width:560px){
+    .hero-btns{flex-direction:column;align-items:stretch}
+    .hero-btns a{justify-content:center;text-align:center}
+    .hero-eyebrow{font-size:.7rem}
+  }
 </style>
 </head>
 <body>
