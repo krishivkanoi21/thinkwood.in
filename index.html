@@ -816,6 +816,15 @@ h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:1px
     .nav-links .nav-cats a.nav-cats-all{grid-column:1/-1;margin-top:.8rem;padding:.85rem 0 .1rem;border-top:1px solid rgba(122,86,48,.12);background:none;font-size:.64rem;letter-spacing:.16em;color:var(--oak);opacity:1}
     .nav-links .nav-cats a.nav-cats-all:hover{background:none;color:var(--bark)}
   }
+
+  /* ===== portfolio autoplay progress ===== */
+  .port-pip{position:relative;overflow:hidden}
+  .port-pip.active{background:rgba(166,124,58,.3)}
+  .port-pip.active::after{content:'';position:absolute;inset:0;background:var(--gold);transform-origin:left center}
+  .port-pip.active.run::after{animation:portPipFill 5s linear forwards}
+  .port-nav.is-paused .port-pip.active.run::after{animation-play-state:paused}
+  @keyframes portPipFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @media (prefers-reduced-motion:reduce){.port-pip.active.run::after{animation:none}}
 </style>
 </head>
 <body>
@@ -1353,7 +1362,7 @@ h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:1px
       var cs=getComputedStyle(pager);
       pager.style.height=(pages[cur].offsetHeight+parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom))+'px';
     }
-    function go(k,init){
+    function go(k,init,auto){
       cur=Math.max(0,Math.min(pages.length-1,k));
       pages.forEach(function(p,i){
         p.classList.toggle('active',i===cur);
@@ -1371,9 +1380,10 @@ h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:1px
       prev.disabled=cur===0; next.disabled=cur===pages.length-1;
       document.querySelectorAll('.port-pip').forEach(function(p,i){p.classList.toggle('active',i===cur);});
       pages[cur].querySelectorAll('.port-item').forEach(function(el){el.classList.add('visible');});
-      if(!init){
+      if(!init&&!auto){
         var top=pager.getBoundingClientRect().top;
         if(top<0) window.scrollTo({top:window.scrollY+top-90,behavior:'smooth'});
+        schedule();
       }
     }
     window.__portGo=go;
@@ -1388,7 +1398,43 @@ h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:1px
       var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0; x0=null;
       if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3) go(cur+(dx<0?1:-1));
     },{passive:true});
+    // __portAutoplay: advance every 5s while the section is on screen
+    var DELAY=5000,timer=null,inView=false,hovering=false,
+        navEl=document.querySelector('.port-nav'),
+        reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function lightboxOpen(){var lb=document.getElementById('lightbox');return !!(lb&&lb.classList.contains('open'));}
+    function restartPip(){
+      var pips=document.querySelectorAll('.port-pip');
+      pips.forEach(function(p){p.classList.remove('run');});
+      var a=document.querySelector('.port-pip.active');
+      if(a){void a.offsetWidth;a.classList.add('run');}
+    }
+    function stop(){
+      if(timer){clearTimeout(timer);timer=null;}
+      if(navEl)navEl.classList.add('is-paused');
+    }
+    function schedule(){
+      stop();
+      if(reduce||!inView||hovering||document.hidden)return;
+      if(navEl)navEl.classList.remove('is-paused');
+      restartPip();
+      timer=setTimeout(function(){
+        timer=null;
+        if(!lightboxOpen()) go(cur+1>=pages.length?0:cur+1,false,true);
+        schedule();
+      },DELAY);
+    }
+    [pager,navEl].forEach(function(el){
+      if(!el)return;
+      el.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse'){hovering=true;stop();}});
+      el.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse'){hovering=false;schedule();}});
+    });
+    document.addEventListener('visibilitychange',function(){document.hidden?stop():schedule();});
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){inView=es[0].isIntersecting;inView?schedule():stop();},{threshold:0.35}).observe(pager);
+    }else{inView=true;}
     go(0,true);
+    schedule();
   })();
 
   (function(){
