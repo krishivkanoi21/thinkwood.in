@@ -772,7 +772,6 @@ h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:1px
     /* padding-top bridges the gap so the panel stays open while the pointer moves onto it */
     .nav-links .nav-cats{position:absolute;top:100%;left:50%;padding-top:1.1rem;transform:translate(-50%,6px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,transform .2s,visibility .2s;z-index:300}
     .nav-has-sub:hover .nav-cats,.nav-has-sub.open .nav-cats{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}
-    .nav-cats-grid{display:grid;grid-template-columns:repeat(2,minmax(190px,1fr));gap:.2rem;padding:.6rem;background:#FAF9F6;border:1px solid rgba(122,86,48,.14);box-shadow:0 20px 44px -20px rgba(46,31,15,.3)}
     .nav-links .nav-cats a{display:block;padding:.75rem .95rem;font-size:.7rem;letter-spacing:.12em;white-space:nowrap;opacity:.88}
     .nav-links .nav-cats a:hover{background:rgba(245,239,228,.95);opacity:1}
   }
@@ -783,7 +782,6 @@ h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:1px
     .nav-chev{width:18px;height:18px;stroke-width:1.6}
     .nav-cats{display:none}
     .nav-has-sub.open .nav-cats{display:block;padding:.2rem 1.25rem 1.1rem}
-    .nav-cats-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
     .nav-links .nav-cats a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:48px;padding:.5rem .6rem;border:1px solid rgba(122,86,48,.28);border-radius:2px;background:rgba(245,239,228,.6);color:var(--oak);font-size:.7rem;letter-spacing:.1em;line-height:1.3}
     .nav-links .nav-cats a.nav-cats-all{background:var(--bark);border-color:var(--bark);color:var(--cream)}
     .nav-links .nav-cats a:active{background:var(--oak);border-color:var(--oak);color:var(--light)}
@@ -795,6 +793,28 @@ h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:1px
   .port-track{display:flex;align-items:flex-start;gap:2rem;transition:transform .65s cubic-bezier(.77,0,.18,1);will-change:transform}
   .port-track .port-page{display:block;flex:0 0 100%;min-width:0;animation:none}
   @media (prefers-reduced-motion:reduce){.port-pager,.port-track{transition:none}}
+
+  /* ===== grouped products menu ===== */
+  .nav-group-title{margin:0;font-family:'Jost',sans-serif;font-weight:400;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+  @media (max-width:900px){
+    .nav-has-sub.open .nav-cats{padding:.15rem 1.25rem 1.2rem}
+    .nav-cats-panel{display:flex;flex-direction:column;gap:1.05rem}
+    .nav-group-title{display:flex;align-items:center;gap:.7rem;margin-bottom:.55rem;font-size:.62rem;letter-spacing:.22em}
+    .nav-group-title::after{content:'';flex:1;height:1px;background:rgba(166,124,58,.3)}
+    .nav-group-links{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+    .nav-group-links a:last-child:nth-child(odd){grid-column:1/-1}
+    .nav-links .nav-cats .nav-group-links a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:48px;padding:.5rem .6rem;border:1px solid rgba(122,86,48,.28);border-radius:2px;background:rgba(245,239,228,.6);color:var(--oak);font-size:.7rem;letter-spacing:.1em;line-height:1.3}
+    .nav-links .nav-cats a.nav-cats-all{display:flex;align-items:center;justify-content:center;min-height:48px;background:var(--bark);border:1px solid var(--bark);color:var(--cream);font-size:.7rem;letter-spacing:.14em}
+  }
+  @media (min-width:901px){
+    .nav-cats-panel{display:grid;grid-template-columns:repeat(3,auto);column-gap:2.6rem;padding:1.45rem 1.7rem 1.05rem;background:#FAF9F6;border:1px solid rgba(122,86,48,.14);box-shadow:0 20px 44px -20px rgba(46,31,15,.3)}
+    .nav-group-title{margin-bottom:.55rem;padding-bottom:.6rem;border-bottom:1px solid rgba(166,124,58,.28);font-size:.6rem;letter-spacing:.22em}
+    .nav-group-links{display:flex;flex-direction:column}
+    .nav-links .nav-cats .nav-group-links a{display:block;padding:.5rem 0;background:none;font-size:.72rem;letter-spacing:.1em;white-space:nowrap;opacity:.85}
+    .nav-links .nav-cats .nav-group-links a:hover{background:none;opacity:1;color:var(--oak)}
+    .nav-links .nav-cats a.nav-cats-all{grid-column:1/-1;margin-top:.8rem;padding:.85rem 0 .1rem;border-top:1px solid rgba(122,86,48,.12);background:none;font-size:.64rem;letter-spacing:.16em;color:var(--oak);opacity:1}
+    .nav-links .nav-cats a.nav-cats-all:hover{background:none;color:var(--bark)}
+  }
 </style>
 </head>
 <body>
@@ -806,15 +826,30 @@ h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:1px
     <li class="nav-has-sub">
       <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-sub-products">Products<svg class="nav-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
       <div class="nav-cats" id="nav-sub-products">
-        <div class="nav-cats-grid">
-          <a href="#products" class="nav-cats-all">All Products</a>
-          <a href="cladding.html?utm_source=website&utm_medium=menu&utm_campaign=cladding">Cladding</a>
-          <a href="decking.html?utm_source=website&utm_medium=menu&utm_campaign=decking">Decking</a>
-          <a href="laminates-and-louvres.html?utm_source=website&utm_medium=menu&utm_campaign=laminates-louvres">Laminates &amp; Louvres</a>
-          <a href="highlighters.html?utm_source=website&utm_medium=menu&utm_campaign=highlighters">Highlighters</a>
-          <a href="flooring.html?utm_source=website&utm_medium=menu&utm_campaign=flooring">Flooring</a>
-          <a href="forms-and-surfaces.html?utm_source=website&utm_medium=menu&utm_campaign=forms-surfaces">Forms &amp; Surfaces</a>
-          <a href="outdoor-landscaping-products.html?utm_source=website&utm_medium=menu&utm_campaign=outdoor-landscaping">Outdoor Landscaping</a>
+        <div class="nav-cats-panel">
+          <div class="nav-group">
+            <p class="nav-group-title">Exterior</p>
+            <div class="nav-group-links">
+              <a href="cladding.html?utm_source=website&utm_medium=menu&utm_campaign=cladding">Cladding</a>
+              <a href="decking.html?utm_source=website&utm_medium=menu&utm_campaign=decking">Decking</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group-title">Interior</p>
+            <div class="nav-group-links">
+              <a href="laminates-and-louvres.html?utm_source=website&utm_medium=menu&utm_campaign=laminates-louvres">Laminates &amp; Louvres</a>
+              <a href="highlighters.html?utm_source=website&utm_medium=menu&utm_campaign=highlighters">Highlighters</a>
+              <a href="flooring.html?utm_source=website&utm_medium=menu&utm_campaign=flooring">Flooring</a>
+              <a href="forms-and-surfaces.html?utm_source=website&utm_medium=menu&utm_campaign=forms-surfaces">Forms &amp; Surfaces</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group-title">Outdoor Landscaping</p>
+            <div class="nav-group-links">
+              <a href="outdoor-landscaping-products.html?utm_source=website&utm_medium=menu&utm_campaign=outdoor-landscaping">Play, Gym &amp; Signage</a>
+            </div>
+          </div>
+          <a href="#products" class="nav-cats-all">View All Products</a>
         </div>
       </div>
     </li>
