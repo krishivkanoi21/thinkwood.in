@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ==========================================================================
+     THINKWOOD — PRIVACY POLICY
+     Same tokens, nav and footer as the landing pages. Linked from the Google
+     Ads lead form asset, which requires a privacy policy URL.
+     ========================================================================== -->
+
+<title>Privacy Policy | Thinkwood Decorative Woods</title>
+<meta name="description" content="How Thinkwood Decorative Woods collects, uses and protects the details you share when you enquire through our website, Google ads, phone or WhatsApp.">
+<link rel="canonical" href="https://thinkwood.in/privacy.html">
+<meta name="theme-color" content="#FAFAF6">
+<link rel="icon" href="favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===== tokens — identical to thinkwood.in ===== */
+:root{
+  --cream:#F5EFE4; --bark:#2E1F0F; --oak:#7A5630; --sand:#C9A97A;
+  --moss:#3D4A30; --light:#FAFAF6; --gold:#A67C3A; --offwhite:#F0EAE0;
+  --rule:rgba(122,86,48,0.18);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --gut:clamp(1.25rem,5vw,5rem);
+  --maxw:1240px;
+  --mm:22px;
+}
+@media (max-width:760px){ :root{ --mm:13px; } }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--light); color:var(--bark);
+  font-family:'Jost',sans-serif; font-weight:300; font-size:16px; line-height:1.7;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:1.5px solid var(--oak);outline-offset:3px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--bark);margin:0}
+h1{font-size:clamp(2.4rem,5.2vw,4.4rem);line-height:1.08}
+h1 em,h2 em{font-style:italic;color:var(--oak)}
+h2{font-size:clamp(2rem,3.2vw,3rem);line-height:1.15}
+h3{font-family:'Jost',sans-serif;font-weight:500;font-size:1.02rem;line-height:1.4;margin:0;letter-spacing:.01em}
+
+.sec-tag{
+  font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  margin:0 0 1.4rem;display:flex;align-items:center;gap:.8rem;font-weight:400;
+}
+.sec-tag::before{content:'';display:block;width:2.4rem;height:1px;background:var(--gold)}
+.lede{font-size:.98rem;line-height:1.85;color:rgba(46,31,15,.72);max-width:58ch;font-weight:300}
+
+/* ===== nav ===== */
+#navbar{
+  position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:2rem;
+  padding:.65rem var(--gut);background:rgba(250,250,246,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.logo-img{height:52px;object-fit:contain}
+.nav-links{display:flex;gap:2.2rem;list-style:none;margin:0 0 0 auto;padding:0}
+.nav-links a{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bark);text-decoration:none;opacity:.82;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav-cta{
+  font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:.55rem 1.4rem;
+  border:1px solid var(--oak);color:var(--oak);text-decoration:none;transition:all .25s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--oak);color:var(--light)}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .logo-img{height:42px}
+  #navbar{gap:1rem}
+  .nav-cta{margin-left:auto}
+}
+
+/* ===== footer — mirrors thinkwood.in ===== */
+.footer-main{background:#1a0e05;padding:4rem 5rem 2rem;box-sizing:border-box;display:flex;flex-direction:column}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem;width:100%;align-items:start}
+.footer-three-cols{display:contents}
+.footer-logo-img{height:52px;object-fit:contain;margin-bottom:1.2rem}
+.footer-brand-desc{font-size:0.82rem;color:rgba(245,239,228,0.55);line-height:1.75;max-width:240px;margin-bottom:1.5rem}
+.footer-socials{display:flex;gap:0.75rem}
+.footer-social-btn{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.25s;flex-shrink:0;border:1px solid rgba(245,239,228,0.2)}
+.footer-social-btn svg{width:17px;height:17px;fill:rgba(245,239,228,.75);transition:fill .25s}
+.footer-social-btn:hover{border-color:transparent}
+.footer-social-btn:hover svg{fill:#fff}
+.footer-social-btn.wa:hover{background:#25D366}
+.footer-social-btn.fb:hover{background:#1877F2}
+.footer-social-btn.ig:hover{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.footer-social-btn.call:hover{background:var(--moss)}
+.footer-col-title{font-size:0.65rem;letter-spacing:0.26em;text-transform:uppercase;color:#C4956C;margin-bottom:1.4rem}
+.footer-col-links{display:flex;flex-direction:column;gap:0.75rem}
+.footer-col-links a{font-size:0.84rem;color:rgba(245,239,228,0.65);text-decoration:none;transition:color 0.2s}
+.footer-col-links a:hover{color:#fff}
+.footer-visit-item{font-size:0.84rem;color:rgba(245,239,228,0.65);line-height:1.7;margin:0 0 0.5rem}
+.footer-visit-item a{color:rgba(245,239,228,0.65);text-decoration:none;transition:color 0.2s}
+.footer-visit-item a:hover{color:#fff}
+.footer-bottom-bar{border-top:1px solid rgba(245,239,228,0.08);padding:1.2rem 0 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;width:100%;margin-top:auto}
+.footer-copy,.footer-location{font-size:0.72rem;color:rgba(245,239,228,0.3);letter-spacing:0.06em;margin:0}
+@media (max-width:900px){
+  .footer-main{padding:3rem 2rem 2rem}
+  .footer-grid{grid-template-columns:1fr;gap:1.5rem}
+  .footer-three-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem}
+  .footer-col-links a{font-size:0.75rem}
+  .footer-col-title{font-size:0.6rem;margin-bottom:0.6rem}
+  .footer-visit-item{font-size:0.75rem}
+}
+@media (max-width:520px){ .footer-main{padding:2.5rem 1.25rem 1.5rem} }
+
+/* ===== whatsapp float ===== */
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:80;width:54px;height:54px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(26,14,5,.28)}
+.wa-fab svg{width:28px;height:28px;fill:#fff}
+
+/* ===== breadcrumb / back to site ===== */
+.crumb{background:var(--cream);border-bottom:1px solid var(--rule)}
+.crumb-in{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;
+  padding:.6rem 0;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase}
+.crumb a{color:var(--oak);text-decoration:none;display:inline-flex;align-items:center;gap:.45rem;transition:opacity .2s}
+.crumb a:hover{opacity:.65}
+.crumb a svg{width:11px;height:11px;fill:currentColor}
+.crumb .sep{color:rgba(46,31,15,.28)}
+.crumb .here{color:rgba(46,31,15,.5)}
+@media (max-width:520px){ .crumb-in{font-size:.62rem;letter-spacing:.12em} }
+
+/* ===== sticky top bar ===== */
+/* nav + breadcrumb travel together, so "Back to Thinkwood" stays reachable from anywhere on the page */
+.topbar{position:sticky;top:0;z-index:60}
+.topbar #navbar{position:static}
+
+/* ===== policy text ===== */
+.policy{padding:clamp(2.8rem,6vw,5rem) 0 clamp(3rem,6vw,5.5rem)}
+.policy-in{max-width:760px}
+.policy h1{margin-bottom:1rem}
+.policy .updated{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(46,31,15,.5);margin:0 0 2.4rem}
+.policy h2{font-size:clamp(1.5rem,2.4vw,1.9rem);margin:2.6rem 0 .8rem}
+.policy p,.policy li{font-size:.98rem;line-height:1.85;color:rgba(46,31,15,.78)}
+.policy p{margin:0 0 1rem}
+.policy ul{margin:0 0 1rem;padding-left:1.2rem}
+.policy li{margin-bottom:.35rem}
+.policy b{font-weight:500;color:var(--bark)}
+.policy a{color:var(--oak)}
+.footer-location a{color:inherit}
+
+/* ===== mobile layer ===== */
+@media (max-width:900px){
+  #navbar{padding:.4rem var(--gut);gap:.75rem}
+  .logo-img{height:36px}
+  .nav-cta{padding:.6rem 1rem;font-size:.7rem;letter-spacing:.12em}
+  .crumb-in{flex-wrap:nowrap;overflow:hidden;padding:.3rem 0;font-size:.72rem;letter-spacing:.1em;gap:.45rem}
+  .crumb-in>*{white-space:nowrap;flex-shrink:0}
+  .crumb .here{flex-shrink:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .crumb a{padding:.3rem 0}
+  .footer-three-cols{grid-template-columns:1fr 1fr;gap:1.6rem 1rem}
+  .footer-three-cols>div:last-child{grid-column:1/-1}
+  .footer-col-links{gap:.15rem}
+  .footer-col-links a{font-size:.9rem;padding:.4rem 0}
+  .footer-col-title{font-size:.68rem}
+  .footer-visit-item{font-size:.9rem}
+  /* leaves room so the floating WhatsApp button never covers the copyright line */
+  .footer-main{padding-bottom:6rem}
+}
+@media (max-width:620px){
+  .sec-tag{font-size:.74rem;letter-spacing:.2em}
+  .wa-fab{width:50px;height:50px;right:14px;bottom:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<div class="topbar">
+<nav id="navbar">
+  <a href="index.html" class="nav-home"><img class="logo-img" src="images/logo.png" alt="Thinkwood Decorative Woods" width="160" height="38"></a>
+  <ul class="nav-links">
+    <li><a href="https://thinkwood.in/#products">Products</a></li>
+    <li><a href="https://thinkwood.in/#portfolio">Projects</a></li>
+    <li><a href="https://thinkwood.in/#contact">Experience Centre</a></li>
+  </ul>
+  <a href="https://thinkwood.in/#contact" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="crumb">
+  <div class="wrap crumb-in">
+    <a href="https://thinkwood.in/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/></svg>Back to Thinkwood</a>
+    <span class="sep">/</span>
+    <span class="here">Privacy Policy</span>
+  </div>
+</div>
+</div>
+
+<!-- ===== POLICY ===== -->
+<main class="policy">
+  <div class="wrap">
+    <div class="policy-in">
+      <p class="sec-tag">Privacy</p>
+      <h1>Privacy <em>Policy</em></h1>
+      <p class="updated">Last updated 16 September 2026</p>
+
+      <p>This policy explains how Thinkwood Decorative Woods ("Thinkwood", "we", "us") handles the personal details you share with us when you enquire about our products and services &mdash; through this website, a form in one of our Google ads, a phone call, WhatsApp or email.</p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li><b>Contact details</b> you give us: your name, phone number, email address and city or area.</li>
+        <li><b>Enquiry details</b>: the products you're interested in, whether you're an architect, designer, builder or homeowner, and any details about your project you choose to share.</li>
+        <li><b>Advertising source</b>: when you reach our website from an ad, our enquiry form records which campaign or search brought you to us, so we know which ads are useful.</li>
+      </ul>
+      <p>We don't ask for payment details, government ID numbers or other sensitive information through our website or ad forms.</p>
+
+      <h2>How we use it</h2>
+      <ul>
+        <li>To call, message or email you back about your enquiry.</li>
+        <li>To prepare quotes, share catalogues and samples, and arrange a visit to our Experience Centre or your site.</li>
+        <li>To supply and install what you order and provide after-sales support.</li>
+        <li>To understand which of our advertising brings genuine enquiries.</li>
+      </ul>
+      <p>We won't send you unrelated marketing, and we never sell or rent your details to anyone.</p>
+
+      <h2>Who we share it with</h2>
+      <p>Only with services that help us receive and manage your enquiry, and only for that purpose:</p>
+      <ul>
+        <li><b>Google</b> &mdash; if you submit a form inside one of our Google ads, Google collects your details and passes them to us (see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>). We may keep these enquiries in a Google Sheet.</li>
+        <li><b>Formspree</b> &mdash; delivers messages sent through the enquiry form on our website.</li>
+        <li><b>WhatsApp</b> &mdash; if you choose to message us there.</li>
+      </ul>
+      <p>We may also disclose information where the law requires it.</p>
+
+      <h2>Cookies</h2>
+      <p>This website doesn't set its own advertising or analytics cookies. Pages load fonts from Google Fonts, and our enquiry form is delivered by Formspree; these services may receive technical details such as your IP address and browser type when a page loads.</p>
+
+      <h2>How long we keep it</h2>
+      <p>We keep enquiry details for as long as we need them to respond, quote and deliver your project, and afterwards only as long as required for our business, accounting and legal records.</p>
+
+      <h2>Your choices</h2>
+      <p>You can ask us at any time to show you the details we hold about you, correct them, stop contacting you, or delete them (unless we must keep them by law). Call or email us using the details below.</p>
+
+      <h2>Contact us</h2>
+      <p>Thinkwood Decorative Woods<br>
+      13C Paul Mansions, 1st Floor, 6 Bishop Lefroy Road, Kolkata 700020, West Bengal, India<br>
+      Phone: <a href="tel:+919830020010">+91 98300 20010</a><br>
+      Email: <a href="mailto:thinkwood.ashish@gmail.com">thinkwood.ashish@gmail.com</a></p>
+
+      <h2>Changes to this policy</h2>
+      <p>If we change how we handle your details, we'll update this page and the date at the top.</p>
+    </div>
+  </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer-main">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <p class="footer-brand-desc">Premium exterior and interior building materials for architects, designers, developers and homeowners across Kolkata and eastern India.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/thinkwood.in/" target="_blank" rel="noopener" class="footer-social-btn ig" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 00-2.13 1.38A5.9 5.9 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 002.13-1.38 5.9 5.9 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 00-1.38-2.13A5.9 5.9 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg>
+        </a>
+        <a href="https://www.facebook.com/thinkwoodofficial/" target="_blank" rel="noopener" class="footer-social-btn fb" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.5c-1.48 0-1.94.92-1.94 1.87v2.25h3.3l-.53 3.49h-2.77v8.44C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </a>
+        <a href="https://wa.me/919830020010" target="_blank" rel="noopener" class="footer-social-btn wa" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+        </a>
+        <a href="tel:+919830020010" class="footer-social-btn call" aria-label="Call us">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-three-cols">
+      <div>
+        <p class="footer-col-title">Explore</p>
+        <div class="footer-col-links">
+          <a href="https://thinkwood.in/#products">What we offer</a>
+          <a href="https://thinkwood.in/#portfolio">Projects</a>
+          <a href="https://thinkwood.in/#why">Why Thinkwood</a>
+          <a href="https://thinkwood.in/#contact">Experience Centre</a>
+          <a href="https://thinkwood.in/#contact">Get a quote</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Products</p>
+        <div class="footer-col-links">
+          <a href="cladding.html">Cladding</a>
+          <a href="decking.html">Decking</a>
+          <a href="laminates-and-louvres.html">Laminates &amp; louvres</a>
+          <a href="highlighters.html">Highlighters</a>
+          <a href="flooring.html">Flooring</a>
+          <a href="forms-and-surfaces.html">Forms + Surfaces</a>
+          <a href="outdoor-landscaping-products.html">Outdoor landscaping</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Visit</p>
+        <p class="footer-visit-item">13C Paul Mansions, 1st Floor<br>6 Bishop Lefroy Road<br>Kolkata 700020</p>
+        <p class="footer-visit-item"><a href="tel:+919830020010">+91 98300 20010</a></p>
+        <p class="footer-visit-item"><a href="mailto:thinkwood.ashish@gmail.com">thinkwood.ashish@gmail.com</a></p>
+        <p class="footer-visit-item">Mon – Sat · 10 AM to 7 PM</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom-bar">
+    <p class="footer-copy">© <span id="yr"></span> Thinkwood Decorative Woods. All rights reserved.</p>
+    <p class="footer-location"><a href="privacy.html">Privacy policy</a> · Kolkata, West Bengal, India</p>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/919830020010?text=Hi%20Thinkwood%2C%20I%27d%20like%20to%20know%20more%20about%20your%20products" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+</a>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
