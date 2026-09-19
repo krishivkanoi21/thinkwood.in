@@ -386,6 +386,15 @@ section[id]{scroll-margin-top:132px}
 .gdots button.is-on{background:#fff;transform:scale(1.25)}
 @media (hover:hover){.gdots button:hover{background:#fff}}
 @media (max-width:620px){.gdots button{width:9px;height:9px}}
+.gnav{position:absolute;top:50%;transform:translateY(-50%);z-index:7;width:30px;height:30px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.85);color:#2E1F0F;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 1px 6px rgba(46,31,15,.22);opacity:0;transition:opacity .25s,background .2s}
+.gnav svg{position:static;inset:auto;width:13px;height:13px;fill:currentColor;display:block}
+.gprev{left:.5rem}
+.gnext{right:.5rem}
+.gnext svg{transform:rotate(180deg)}
+.pcard-media:hover .gnav,.coll-media:hover .gnav,.gnav:focus-visible{opacity:1}
+.gnav:hover{background:#fff}
+@media (hover:none){.gnav{opacity:.82}}
+@media (max-width:620px){.gnav{width:34px;height:34px}}
 </style>
 </head>
 <body>
@@ -889,10 +898,16 @@ document.querySelectorAll('.ask').forEach(function(btn){
 <script>
   /* card image galleries */
   (function(){
+    var DELAY = 4500;
+    var slow = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/></svg>';
+    var players = [];
+
     document.querySelectorAll('.pcard-media,.coll-media').forEach(function(m){
       var imgs = [].slice.call(m.querySelectorAll('img[data-g]'));
       if (imgs.length < 2) return;
-      var i = 0;
+      var i = 0, timer = null, visible = false, hovering = false, held = 0;
+
       var dots = document.createElement('div');
       dots.className = 'gdots';
       imgs.forEach(function(im, k){
@@ -901,10 +916,26 @@ document.querySelectorAll('.ask').forEach(function(btn){
         b.type = 'button';
         b.setAttribute('aria-label', 'Photo ' + (k + 1) + ' of ' + imgs.length);
         if (k === 0) b.classList.add('is-on');
-        b.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); show(k); });
+        b.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); hold(); show(k); });
         dots.appendChild(b);
       });
       m.appendChild(dots);
+
+      var prev = document.createElement('button');
+      prev.type = 'button';
+      prev.className = 'gnav gprev';
+      prev.setAttribute('aria-label', 'Previous photo');
+      prev.innerHTML = ARROW;
+      var next = document.createElement('button');
+      next.type = 'button';
+      next.className = 'gnav gnext';
+      next.setAttribute('aria-label', 'Next photo');
+      next.innerHTML = ARROW;
+      prev.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); hold(); show(i - 1); });
+      next.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); hold(); show(i + 1); });
+      m.appendChild(prev);
+      m.appendChild(next);
+
       function load(k){
         var im = imgs[k];
         if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute('data-src'); }
@@ -916,16 +947,40 @@ document.querySelectorAll('.ask').forEach(function(btn){
         [].forEach.call(dots.children, function(b, j){ b.classList.toggle('is-on', j === k); });
         i = k;
       }
-      m.addEventListener('click', function(){ show(i + 1); });
+      function hold(){ held = Date.now(); }
+      function tick(){
+        if (!visible || hovering || document.hidden) return;
+        if (Date.now() - held < DELAY) return;
+        show(i + 1);
+      }
+      function start(){ if (!timer && !slow) timer = setInterval(tick, DELAY); }
+      function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+
+      m.addEventListener('click', function(){ hold(); show(i + 1); });
+      m.addEventListener('pointerenter', function(e){ if (e.pointerType === 'mouse') hovering = true; });
+      m.addEventListener('pointerleave', function(e){ if (e.pointerType === 'mouse') hovering = false; });
       var x0 = null;
       m.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
       m.addEventListener('touchend', function(e){
         if (x0 === null) return;
         var dx = e.changedTouches[0].clientX - x0;
-        if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1));
+        if (Math.abs(dx) > 40) { hold(); show(i + (dx < 0 ? 1 : -1)); }
         x0 = null;
       }, {passive:true});
+
+      players.push({el:m, on:function(v){ visible = v; if (v) { load(1); start(); } else stop(); }});
     });
+
+    if (players.length && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          players.forEach(function(p){ if (p.el === en.target) p.on(en.isIntersecting); });
+        });
+      }, {threshold:.35});
+      players.forEach(function(p){ io.observe(p.el); });
+    } else {
+      players.forEach(function(p){ p.on(true); });
+    }
   })();
 </script>
 </body>
