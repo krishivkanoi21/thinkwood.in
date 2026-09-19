@@ -376,6 +376,16 @@ section[id]{scroll-margin-top:132px}
   .wa-fab{width:50px;height:50px;right:14px;bottom:14px}
   .check-row input{width:20px;height:20px;flex:0 0 20px}
 }
+
+/* ===== card gallery ===== */
+.pcard-media,.coll-media{position:relative}
+.pcard-media img[data-g],.coll-media img[data-g]{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease;z-index:2}
+.pcard-media img[data-g].is-on,.coll-media img[data-g].is-on{opacity:1}
+.gdots{position:absolute;left:0;right:0;bottom:.55rem;display:flex;justify-content:center;gap:.38rem;z-index:6}
+.gdots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(0,0,0,.25);cursor:pointer;transition:background .2s,transform .2s}
+.gdots button.is-on{background:#fff;transform:scale(1.25)}
+@media (hover:hover){.gdots button:hover{background:#fff}}
+@media (max-width:620px){.gdots button{width:9px;height:9px}}
 </style>
 </head>
 <body>
@@ -453,7 +463,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal" data-use="wide t10">
         <div class="pcard-media">
           <span class="pcard-tag">Wide Plank</span>
-          <img src="images/flooring/card-immenso-hybrid-laminate.jpg" alt="Immenso Hybrid Laminate — apartment living room, wide plank" loading="lazy">
+          <img src="images/flooring/card-immenso-hybrid-laminate.jpg" alt="Immenso Hybrid Laminate — apartment living room, wide plank" loading="lazy" data-g>
+            <img data-g data-src="images/flooring/card-immenso-hybrid-laminate-2.jpg" alt="Immenso hybrid laminate in a living room">
+            <img data-g data-src="images/flooring/card-immenso-hybrid-laminate-3.jpg" alt="Immenso hybrid laminate in a bedroom">
         </div>
         <div class="pcard-body">
           <h3>Immenso Hybrid Laminate</h3>
@@ -471,7 +483,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal" data-use="herring t12">
         <div class="pcard-media">
           <span class="pcard-tag">Herringbone</span>
-          <img src="images/flooring/card-herringbone-collection.jpg" alt="Herringbone Collection — grey herringbone floor close-up" loading="lazy">
+          <img src="images/flooring/card-herringbone-collection.jpg" alt="Herringbone Collection — grey herringbone floor close-up" loading="lazy" data-g>
+            <img data-g data-src="images/flooring/card-herringbone-collection-2.jpg" alt="Herringbone Collection laminate in white washed oak">
+            <img data-g data-src="images/flooring/card-herringbone-collection-3.jpg" alt="Herringbone Collection laminate in French oak">
         </div>
         <div class="pcard-body">
           <h3>Herringbone Collection</h3>
@@ -489,7 +503,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal" data-use="herring t12">
         <div class="pcard-media">
           <span class="pcard-tag">Herringbone</span>
-          <img src="images/flooring/card-herringbone-2-0.jpg" alt="Herringbone 2.0 — golden oak herringbone floor close-up" loading="lazy">
+          <img src="images/flooring/card-herringbone-2-0.jpg" alt="Herringbone 2.0 — golden oak herringbone floor close-up" loading="lazy" data-g>
+            <img data-g data-src="images/flooring/card-herringbone-2-0-2.jpg" alt="Herringbone 2.0 laminate in Nordic grey oak">
+            <img data-g data-src="images/flooring/card-herringbone-2-0-3.jpg" alt="Herringbone 2.0 laminate in a dark oak">
         </div>
         <div class="pcard-body">
           <h3>Herringbone 2.0</h3>
@@ -507,7 +523,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal" data-use="herring t10">
         <div class="pcard-media">
           <span class="pcard-tag">Herringbone</span>
-          <img src="images/flooring/card-livanti-hybrid-laminate.jpg" alt="Livanti Hybrid Laminate — living room with herringbone floor and fireplace" loading="lazy">
+          <img src="images/flooring/card-livanti-hybrid-laminate.jpg" alt="Livanti Hybrid Laminate — living room with herringbone floor and fireplace" loading="lazy" data-g>
+            <img data-g data-src="images/flooring/card-livanti-hybrid-laminate-2.jpg" alt="Livanti hybrid laminate in a bright living room">
+            <img data-g data-src="images/flooring/card-livanti-hybrid-laminate-3.jpg" alt="Livanti hybrid laminate in a warm oak tone">
         </div>
         <div class="pcard-body">
           <h3>Livanti Hybrid Laminate</h3>
@@ -525,7 +543,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal" data-use="wide t8">
         <div class="pcard-media">
           <span class="pcard-tag">Wide Plank</span>
-          <img src="images/flooring/card-elegance-walnut.jpg" alt="Elegance Walnut — living room with marble accent wall" loading="lazy">
+          <img src="images/flooring/card-elegance-walnut.jpg" alt="Elegance Walnut — living room with marble accent wall" loading="lazy" data-g>
+            <img data-g data-src="images/flooring/card-elegance-walnut-2.jpg" alt="Elegance Walnut flooring in a living room">
+            <img data-g data-src="images/flooring/card-elegance-walnut-3.jpg" alt="Elegance Walnut flooring with a sofa and lamp">
         </div>
         <div class="pcard-body">
           <h3>Elegance Walnut</h3>
@@ -543,7 +563,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal" data-use="wide t10">
         <div class="pcard-media">
           <span class="pcard-tag">Wide Plank</span>
-          <img src="images/flooring/card-majesty-grande.jpg" alt="Majesty Grande — apartment living room, wide plank flooring" loading="lazy">
+          <img src="images/flooring/card-majesty-grande.jpg" alt="Majesty Grande — apartment living room, wide plank flooring" loading="lazy" data-g>
+            <img data-g data-src="images/flooring/card-majesty-grande-2.jpg" alt="Majesty Grande flooring in a dark-panelled living room">
+            <img data-g data-src="images/flooring/card-majesty-grande-3.jpg" alt="Majesty Grande flooring in a bright lounge">
         </div>
         <div class="pcard-body">
           <h3>Majesty Grande</h3>
@@ -561,7 +583,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal" data-use="herring t10">
         <div class="pcard-media">
           <span class="pcard-tag">Herringbone</span>
-          <img src="images/flooring/card-oak-artisan-herringbone.jpg" alt="Oak Artisan Herringbone — light herringbone floor close-up" loading="lazy">
+          <img src="images/flooring/card-oak-artisan-herringbone.jpg" alt="Oak Artisan Herringbone — light herringbone floor close-up" loading="lazy" data-g>
+            <img data-g data-src="images/flooring/card-oak-artisan-herringbone-2.jpg" alt="Oak Artisan herringbone flooring in a lounge">
+            <img data-g data-src="images/flooring/card-oak-artisan-herringbone-3.jpg" alt="Oak Artisan herringbone flooring in a living room">
         </div>
         <div class="pcard-body">
           <h3>Oak Artisan Herringbone</h3>
@@ -579,7 +603,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal" data-use="herring t12">
         <div class="pcard-media">
           <span class="pcard-tag">Herringbone</span>
-          <img src="images/flooring/card-herringbone-3-0-pietra.jpg" alt="Herringbone 3.0 Pietra Collection — bedroom herringbone floor" loading="lazy">
+          <img src="images/flooring/card-herringbone-3-0-pietra.jpg" alt="Herringbone 3.0 Pietra Collection — bedroom herringbone floor" loading="lazy" data-g>
+            <img data-g data-src="images/flooring/card-herringbone-3-0-pietra-2.jpg" alt="Herringbone 3.0 Pietra flooring in grey">
+            <img data-g data-src="images/flooring/card-herringbone-3-0-pietra-3.jpg" alt="Herringbone 3.0 Pietra flooring in a living room">
         </div>
         <div class="pcard-body">
           <h3>Herringbone 3.0 — Pietra Collection</h3>
@@ -859,5 +885,48 @@ document.querySelectorAll('.ask').forEach(function(btn){
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
+
+<script>
+  /* card image galleries */
+  (function(){
+    document.querySelectorAll('.pcard-media,.coll-media').forEach(function(m){
+      var imgs = [].slice.call(m.querySelectorAll('img[data-g]'));
+      if (imgs.length < 2) return;
+      var i = 0;
+      var dots = document.createElement('div');
+      dots.className = 'gdots';
+      imgs.forEach(function(im, k){
+        if (k === 0) im.classList.add('is-on');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Photo ' + (k + 1) + ' of ' + imgs.length);
+        if (k === 0) b.classList.add('is-on');
+        b.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); show(k); });
+        dots.appendChild(b);
+      });
+      m.appendChild(dots);
+      function load(k){
+        var im = imgs[k];
+        if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute('data-src'); }
+      }
+      function show(k){
+        k = (k + imgs.length) % imgs.length;
+        load(k); load((k + 1) % imgs.length);
+        imgs.forEach(function(im, j){ im.classList.toggle('is-on', j === k); });
+        [].forEach.call(dots.children, function(b, j){ b.classList.toggle('is-on', j === k); });
+        i = k;
+      }
+      m.addEventListener('click', function(){ show(i + 1); });
+      var x0 = null;
+      m.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+      m.addEventListener('touchend', function(e){
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1));
+        x0 = null;
+      }, {passive:true});
+    });
+  })();
+</script>
 </body>
 </html>

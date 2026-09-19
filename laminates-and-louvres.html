@@ -369,6 +369,16 @@ section[id]{scroll-margin-top:132px}
   .wa-fab{width:50px;height:50px;right:14px;bottom:14px}
   .check-row input{width:20px;height:20px;flex:0 0 20px}
 }
+
+/* ===== card gallery ===== */
+.pcard-media,.coll-media{position:relative}
+.pcard-media img[data-g],.coll-media img[data-g]{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease;z-index:2}
+.pcard-media img[data-g].is-on,.coll-media img[data-g].is-on{opacity:1}
+.gdots{position:absolute;left:0;right:0;bottom:.55rem;display:flex;justify-content:center;gap:.38rem;z-index:6}
+.gdots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(0,0,0,.25);cursor:pointer;transition:background .2s,transform .2s}
+.gdots button.is-on{background:#fff;transform:scale(1.25)}
+@media (hover:hover){.gdots button:hover{background:#fff}}
+@media (max-width:620px){.gdots button{width:9px;height:9px}}
 </style>
 </head>
 <body>
@@ -445,7 +455,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Laminate</span>
-          <img src="images/card-originals-mcs.jpg" alt="Originals MCS woven-texture finish close-up" loading="lazy">
+          <img src="images/card-originals-mcs.jpg" alt="Originals MCS woven-texture finish close-up" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/originals-mcs-2.jpg" alt="Originals MCS laminate in teal">
+            <img data-g data-src="images/laminates/originals-mcs-3.jpg" alt="Originals MCS laminate in a white quilted texture">
         </div>
         <div class="pcard-body">
           <h3>Originals MCS</h3>
@@ -463,7 +475,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Laminate</span>
-          <img src="images/card-super-matt.jpg" alt="Super Matt colour swatch chart" loading="lazy">
+          <img src="images/card-super-matt.jpg" alt="Super Matt colour swatch chart" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/super-matt-2.jpg" alt="Super Matt laminate shades in neutrals">
+            <img data-g data-src="images/laminates/super-matt-3.jpg" alt="Super Matt laminate shades in greys and blues">
         </div>
         <div class="pcard-body">
           <h3>Super Matt</h3>
@@ -481,7 +495,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Laminate</span>
-          <img src="images/card-surface-matters.jpg" alt="Surface Matters marble-look laminate finish" loading="lazy">
+          <img src="images/card-surface-matters.jpg" alt="Surface Matters marble-look laminate finish" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/surface-matters-2.jpg" alt="Surface Matters laminate in Country Cedar">
+            <img data-g data-src="images/laminates/surface-matters-3.jpg" alt="Surface Matters laminate in Peruvian Walnut">
         </div>
         <div class="pcard-body">
           <h3>Surface Matters</h3>
@@ -516,7 +532,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Louvre</span>
-          <img src="images/portfolio-snazzy-living-room.jpg" alt="Snazzy Bamboo Louvres fluted profile, charcoal finish" loading="lazy">
+          <img src="images/portfolio-snazzy-living-room.jpg" alt="Snazzy Bamboo Louvres fluted profile, charcoal finish" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/snazzy-bamboo-louvres-2.jpg" alt="Snazzy bamboo louvres in a sand finish">
+            <img data-g data-src="images/laminates/snazzy-bamboo-louvres-3.jpg" alt="Snazzy bamboo louvres in a dark finish">
         </div>
         <div class="pcard-body">
           <h3>Snazzy Bamboo Louvres</h3>
@@ -534,7 +552,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Louvre + Sheet</span>
-          <img src="images/portfolio-trendy-reading-corner.jpg" alt="Trendy Louvres and MCS fluted profile, slate finish" loading="lazy">
+          <img src="images/portfolio-trendy-reading-corner.jpg" alt="Trendy Louvres and MCS fluted profile, slate finish" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/trendy-louvres-mcs-2.jpg" alt="Trendy louvres in a deep teal finish">
+            <img data-g data-src="images/laminates/trendy-louvres-mcs-3.jpg" alt="Mineral composite sheet in a stone texture">
         </div>
         <div class="pcard-body">
           <h3>Trendy Louvres &amp; MCS</h3>
@@ -552,7 +572,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Louvre</span>
-          <img src="images/portfolio-woodvents-living-room.jpg" alt="Woodvents Louvres fluted profile in a timber finish" loading="lazy">
+          <img src="images/portfolio-woodvents-living-room.jpg" alt="Woodvents Louvres fluted profile in a timber finish" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/woodvents-louvres-2.jpg" alt="Woodvents louvres in a walnut finish">
+            <img data-g data-src="images/laminates/woodvents-louvres-3.jpg" alt="Woodvents louvres in a natural oak finish">
         </div>
         <div class="pcard-body">
           <h3>Woodvents Louvres</h3>
@@ -570,7 +592,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Louvre Panel</span>
-          <img src="images/card-elemet-panels.jpg" alt="Elemet Panels square-rib texture close-up" loading="lazy">
+          <img src="images/card-elemet-panels.jpg" alt="Elemet Panels square-rib texture close-up" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/elemet-panels-2.jpg" alt="Elemet panels in a brushed gold finish">
+            <img data-g data-src="images/laminates/elemet-panels-3.jpg" alt="Elemet panels in an olive finish">
         </div>
         <div class="pcard-body">
           <h3>Elemet Panels</h3>
@@ -588,7 +612,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Groove Panel</span>
-          <img src="images/portfolio-groove-lounge-alcove.jpg" alt="Groove in Wood reeded panel in a natural oak finish" loading="lazy">
+          <img src="images/portfolio-groove-lounge-alcove.jpg" alt="Groove in Wood reeded panel in a natural oak finish" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/groove-in-wood-2.jpg" alt="Groove in Wood panelling in a dark oak finish">
+            <img data-g data-src="images/laminates/groove-in-wood-3.jpg" alt="Groove in Wood panelling in a grey wash">
         </div>
         <div class="pcard-body">
           <h3>Groove in Wood</h3>
@@ -606,7 +632,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Skirting</span>
-          <img src="images/site-cressida-reception.jpg" alt="Cressida Skirting profile in a timber finish" loading="lazy">
+          <img src="images/site-cressida-reception.jpg" alt="Cressida Skirting profile in a timber finish" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/cressida-skirting-2.jpg" alt="Cressida skirting in a walnut finish">
+            <img data-g data-src="images/laminates/cressida-skirting-3.jpg" alt="Cressida skirting in mustard">
         </div>
         <div class="pcard-body">
           <h3>Cressida Skirting</h3>
@@ -624,7 +652,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Wall Panel</span>
-          <img src="images/site-hdhmr-music-room.jpg" alt="Living room feature wall finished in HDHMR Designer Panels" loading="lazy">
+          <img src="images/laminates/hdhmr-designer-panels-1.jpg" alt="HDHMR designer panels lining a bedroom wall" loading="lazy" data-g>
+            <img data-g data-src="images/laminates/hdhmr-designer-panels-2.jpg" alt="HDHMR designer panels in a green dining room">
+            <img data-g data-src="images/laminates/hdhmr-designer-panels-3.jpg" alt="HDHMR designer panels in a bedroom">
         </div>
         <div class="pcard-body">
           <h3>HDHMR Designer Panels</h3>
@@ -907,5 +937,48 @@ document.querySelectorAll('.ask').forEach(function(btn){
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
+
+<script>
+  /* card image galleries */
+  (function(){
+    document.querySelectorAll('.pcard-media,.coll-media').forEach(function(m){
+      var imgs = [].slice.call(m.querySelectorAll('img[data-g]'));
+      if (imgs.length < 2) return;
+      var i = 0;
+      var dots = document.createElement('div');
+      dots.className = 'gdots';
+      imgs.forEach(function(im, k){
+        if (k === 0) im.classList.add('is-on');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Photo ' + (k + 1) + ' of ' + imgs.length);
+        if (k === 0) b.classList.add('is-on');
+        b.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); show(k); });
+        dots.appendChild(b);
+      });
+      m.appendChild(dots);
+      function load(k){
+        var im = imgs[k];
+        if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute('data-src'); }
+      }
+      function show(k){
+        k = (k + imgs.length) % imgs.length;
+        load(k); load((k + 1) % imgs.length);
+        imgs.forEach(function(im, j){ im.classList.toggle('is-on', j === k); });
+        [].forEach.call(dots.children, function(b, j){ b.classList.toggle('is-on', j === k); });
+        i = k;
+      }
+      m.addEventListener('click', function(){ show(i + 1); });
+      var x0 = null;
+      m.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+      m.addEventListener('touchend', function(e){
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1));
+        x0 = null;
+      }, {passive:true});
+    });
+  })();
+</script>
 </body>
 </html>

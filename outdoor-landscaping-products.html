@@ -362,6 +362,16 @@ section[id]{scroll-margin-top:132px}
   .wa-fab{width:50px;height:50px;right:14px;bottom:14px}
   .check-row input{width:20px;height:20px;flex:0 0 20px}
 }
+
+/* ===== card gallery ===== */
+.pcard-media,.coll-media{position:relative}
+.pcard-media img[data-g],.coll-media img[data-g]{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease;z-index:2}
+.pcard-media img[data-g].is-on,.coll-media img[data-g].is-on{opacity:1}
+.gdots{position:absolute;left:0;right:0;bottom:.55rem;display:flex;justify-content:center;gap:.38rem;z-index:6}
+.gdots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(0,0,0,.25);cursor:pointer;transition:background .2s,transform .2s}
+.gdots button.is-on{background:#fff;transform:scale(1.25)}
+@media (hover:hover){.gdots button:hover{background:#fff}}
+@media (max-width:620px){.gdots button{width:9px;height:9px}}
 </style>
 </head>
 <body>
@@ -434,7 +444,9 @@ section[id]{scroll-margin-top:132px}
 
       <article class="pcard reveal">
         <div class="pcard-media">
-          <img src="images/outdoor/card-play-equipment.jpg" alt="Multi-activity playground structure with slides, towers and climbers" loading="lazy">
+          <img src="images/outdoor/card-play-equipment.jpg" alt="Multi-activity playground structure with slides, towers and climbers" loading="lazy" data-g>
+            <img data-g data-src="images/outdoor/card-play-equipment-2.jpg" alt="Playground multi-activity structure installed on site">
+            <img data-g data-src="images/outdoor/card-play-equipment-3.jpg" alt="Multi-activity play system with slides and climbers">
         </div>
         <div class="pcard-body">
           <h3>Play Equipment</h3>
@@ -461,7 +473,9 @@ section[id]{scroll-margin-top:132px}
 
       <article class="pcard reveal">
         <div class="pcard-media">
-          <img src="images/outdoor/card-outdoor-gym.jpg" alt="Canopied outdoor multi-station gym unit with body-weight stations" loading="lazy">
+          <img src="images/outdoor/card-outdoor-gym.jpg" alt="Canopied outdoor multi-station gym unit with body-weight stations" loading="lazy" data-g>
+            <img data-g data-src="images/outdoor/card-outdoor-gym-2.jpg" alt="Outdoor gym leg press double station">
+            <img data-g data-src="images/outdoor/card-outdoor-gym-3.jpg" alt="Outdoor gym chest press double station">
         </div>
         <div class="pcard-body">
           <h3>Outdoor Gym</h3>
@@ -484,7 +498,9 @@ section[id]{scroll-margin-top:132px}
 
       <article class="pcard reveal">
         <div class="pcard-media">
-          <img src="images/outdoor/card-landmark-signage.jpg" alt="Thinkwood-branded FRP pylon signage on an industrial estate roadside" loading="lazy">
+          <img src="images/outdoor/card-landmark-signage.jpg" alt="Thinkwood-branded FRP pylon signage on an industrial estate roadside" loading="lazy" data-g>
+            <img data-g data-src="images/outdoor/card-landmark-signage-2.jpg" alt="Landmark signage pylon marking a play area">
+            <img data-g data-src="images/outdoor/card-landmark-signage-3.jpg" alt="Landmark signage pylons outside an office building">
         </div>
         <div class="pcard-body">
           <h3>Signage</h3>
@@ -779,5 +795,48 @@ document.querySelectorAll('.ask').forEach(function(btn){
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
+
+<script>
+  /* card image galleries */
+  (function(){
+    document.querySelectorAll('.pcard-media,.coll-media').forEach(function(m){
+      var imgs = [].slice.call(m.querySelectorAll('img[data-g]'));
+      if (imgs.length < 2) return;
+      var i = 0;
+      var dots = document.createElement('div');
+      dots.className = 'gdots';
+      imgs.forEach(function(im, k){
+        if (k === 0) im.classList.add('is-on');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Photo ' + (k + 1) + ' of ' + imgs.length);
+        if (k === 0) b.classList.add('is-on');
+        b.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); show(k); });
+        dots.appendChild(b);
+      });
+      m.appendChild(dots);
+      function load(k){
+        var im = imgs[k];
+        if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute('data-src'); }
+      }
+      function show(k){
+        k = (k + imgs.length) % imgs.length;
+        load(k); load((k + 1) % imgs.length);
+        imgs.forEach(function(im, j){ im.classList.toggle('is-on', j === k); });
+        [].forEach.call(dots.children, function(b, j){ b.classList.toggle('is-on', j === k); });
+        i = k;
+      }
+      m.addEventListener('click', function(){ show(i + 1); });
+      var x0 = null;
+      m.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+      m.addEventListener('touchend', function(e){
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1));
+        x0 = null;
+      }, {passive:true});
+    });
+  })();
+</script>
 </body>
 </html>

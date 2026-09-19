@@ -355,6 +355,16 @@ section[id]{scroll-margin-top:132px}
   .wa-fab{width:50px;height:50px;right:14px;bottom:14px}
   .check-row input{width:20px;height:20px;flex:0 0 20px}
 }
+
+/* ===== card gallery ===== */
+.pcard-media,.coll-media{position:relative}
+.pcard-media img[data-g],.coll-media img[data-g]{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease;z-index:2}
+.pcard-media img[data-g].is-on,.coll-media img[data-g].is-on{opacity:1}
+.gdots{position:absolute;left:0;right:0;bottom:.55rem;display:flex;justify-content:center;gap:.38rem;z-index:6}
+.gdots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(0,0,0,.25);cursor:pointer;transition:background .2s,transform .2s}
+.gdots button.is-on{background:#fff;transform:scale(1.25)}
+@media (hover:hover){.gdots button:hover{background:#fff}}
+@media (max-width:620px){.gdots button{width:9px;height:9px}}
 </style>
 </head>
 <body>
@@ -430,7 +440,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Lifts</span>
-          <img src="images/forms-surfaces/card-elevator-interiors.jpg" alt="Lift cabin finished in bronze metal with a backlit onyx panel" loading="lazy">
+          <img src="images/forms-surfaces/card-elevator-interiors.jpg" alt="Lift cabin finished in bronze metal with a backlit onyx panel" loading="lazy" data-g>
+            <img data-g data-src="images/forms-surfaces/card-elevator-interiors-2.jpg" alt="Elevator cabin finished in gold-toned metal">
+            <img data-g data-src="images/forms-surfaces/card-elevator-interiors-3.jpg" alt="Elevator cabin lined in wood and metal">
         </div>
         <div class="pcard-body">
           <h3>Elevator Interiors</h3>
@@ -448,7 +460,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Metal</span>
-          <img src="images/forms-surfaces/card-bonded-metal.jpg" alt="Bonded metal panel in a cast Taos relief, bronze dark patina" loading="lazy">
+          <img src="images/forms-surfaces/card-bonded-metal.jpg" alt="Bonded metal panel in a cast Taos relief, bronze dark patina" loading="lazy" data-g>
+            <img data-g data-src="images/forms-surfaces/card-bonded-metal-2.jpg" alt="Bonded metal panels in a hotel lobby">
+            <img data-g data-src="images/forms-surfaces/card-bonded-metal-3.jpg" alt="Bonded metal wall in a diamond pattern">
         </div>
         <div class="pcard-body">
           <h3>Bonded Metal</h3>
@@ -466,7 +480,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Composite</span>
-          <img src="images/forms-surfaces/card-bonded-quartz.jpg" alt="Bonded Quartz panels in white with a sculpted wave relief" loading="lazy">
+          <img src="images/forms-surfaces/card-bonded-quartz.jpg" alt="Bonded Quartz panels in white with a sculpted wave relief" loading="lazy" data-g>
+            <img data-g data-src="images/forms-surfaces/card-bonded-quartz-2.jpg" alt="Bonded quartz panel with a fine ribbed texture">
+            <img data-g data-src="images/forms-surfaces/card-bonded-quartz-3.jpg" alt="Bonded quartz panel in a crushed texture">
         </div>
         <div class="pcard-body">
           <h3>Bonded Quartz</h3>
@@ -487,7 +503,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Doors</span>
-          <img src="images/forms-surfaces/card-bonded-metal-doors.jpg" alt="Bronze bonded metal double doors in a marble lobby" loading="lazy">
+          <img src="images/forms-surfaces/card-bonded-metal-doors.jpg" alt="Bronze bonded metal double doors in a marble lobby" loading="lazy" data-g>
+            <img data-g data-src="images/forms-surfaces/card-bonded-metal-doors-2.jpg" alt="Bonded metal entrance doors in bronze">
+            <img data-g data-src="images/forms-surfaces/card-bonded-metal-doors-3.jpg" alt="Bonded metal doors at a residence entrance">
         </div>
         <div class="pcard-body">
           <h3>Bonded Metal Doors</h3>
@@ -508,7 +526,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Metal</span>
-          <img src="images/forms-surfaces/card-fused-metal.jpg" alt="Fused metal sheet in the Circle pattern, copper finish" loading="lazy">
+          <img src="images/forms-surfaces/card-fused-metal-1.jpg" alt="Fused metal sheet in the Circle pattern, copper finish" loading="lazy" data-g>
+            <img data-g data-src="images/forms-surfaces/card-fused-metal-2.jpg" alt="Fused metal sheet with a rippled silver finish">
+            <img data-g data-src="images/forms-surfaces/card-fused-metal-3.jpg" alt="Fused metal panel in a fluted copper finish">
         </div>
         <div class="pcard-body">
           <h3>Fused Metal</h3>
@@ -526,7 +546,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Glass</span>
-          <img src="images/forms-surfaces/card-vivigraphix-glass.jpg" alt="ViviGraphix Gradiance glass in the Ascension pattern used as a partition" loading="lazy">
+          <img src="images/forms-surfaces/card-vivigraphix-glass-1.jpg" alt="ViviGraphix Gradiance glass in the Ascension pattern used as a partition" loading="lazy" data-g>
+            <img data-g data-src="images/forms-surfaces/card-vivigraphix-glass-2.jpg" alt="ViviGraphix Gradiance glass sample panel">
+            <img data-g data-src="images/forms-surfaces/card-vivigraphix-glass-3.jpg" alt="ViviGraphix Gradiance glass screen in a lobby">
         </div>
         <div class="pcard-body">
           <h3>ViviGraphix Gradiance Glass</h3>
@@ -544,7 +566,9 @@ section[id]{scroll-margin-top:132px}
       <article class="pcard reveal">
         <div class="pcard-media">
           <span class="pcard-tag">Glass</span>
-          <img src="images/forms-surfaces/card-vivitela-mesh-glass.jpg" alt="ViviTela mesh glass with an Overlay weave in nickel silver" loading="lazy">
+          <img src="images/forms-surfaces/card-vivitela-mesh-glass.jpg" alt="ViviTela mesh glass with an Overlay weave in nickel silver" loading="lazy" data-g>
+            <img data-g data-src="images/forms-surfaces/card-vivitela-mesh-glass-2.jpg" alt="ViviTela mesh glass in a warm bronze weave">
+            <img data-g data-src="images/forms-surfaces/card-vivitela-mesh-glass-3.jpg" alt="ViviTela mesh glass in a gold weave">
         </div>
         <div class="pcard-body">
           <h3>ViviTela Mesh Glass</h3>
@@ -832,5 +856,48 @@ document.querySelectorAll('.ask').forEach(function(btn){
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
+
+<script>
+  /* card image galleries */
+  (function(){
+    document.querySelectorAll('.pcard-media,.coll-media').forEach(function(m){
+      var imgs = [].slice.call(m.querySelectorAll('img[data-g]'));
+      if (imgs.length < 2) return;
+      var i = 0;
+      var dots = document.createElement('div');
+      dots.className = 'gdots';
+      imgs.forEach(function(im, k){
+        if (k === 0) im.classList.add('is-on');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Photo ' + (k + 1) + ' of ' + imgs.length);
+        if (k === 0) b.classList.add('is-on');
+        b.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); show(k); });
+        dots.appendChild(b);
+      });
+      m.appendChild(dots);
+      function load(k){
+        var im = imgs[k];
+        if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute('data-src'); }
+      }
+      function show(k){
+        k = (k + imgs.length) % imgs.length;
+        load(k); load((k + 1) % imgs.length);
+        imgs.forEach(function(im, j){ im.classList.toggle('is-on', j === k); });
+        [].forEach.call(dots.children, function(b, j){ b.classList.toggle('is-on', j === k); });
+        i = k;
+      }
+      m.addEventListener('click', function(){ show(i + 1); });
+      var x0 = null;
+      m.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+      m.addEventListener('touchend', function(e){
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1));
+        x0 = null;
+      }, {passive:true});
+    });
+  })();
+</script>
 </body>
 </html>
