@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Google tag (gtag.js) — Google Ads conversion tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18268101915"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18268101915');
+</script>
+<script>
+/* Counts enquiries as Google Ads conversions: phone taps, WhatsApp taps and enquiry-form sends. */
+(function(){
+  var CALL    = 'AW-18268101915/DAuGCOzK4p0dEJu69IZE';   /* Click to call */
+  var ENQUIRY = 'AW-18268101915/Op6yCO_K4p0dEJu69IZE';   /* WhatsApp tap or form sent */
+  function report(label){
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'conversion', { send_to: label, value: 1.0, currency: 'INR' });
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a || !a.href) return;
+    if (a.href.indexOf('tel:') === 0) report(CALL);
+    else if (a.href.indexOf('wa.me') > -1 || a.href.indexOf('api.whatsapp.com') > -1) report(ENQUIRY);
+  }, true);
+  document.addEventListener('submit', function(e){
+    if (e.target && e.target.id === 'inquiry-form') report(ENQUIRY);
+  }, true);
+})();
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +59,9 @@
 <meta name="twitter:image:alt" content="The Thinkwood Decorative Woods experience centre in Kolkata, with cladding, laminate and louvre samples on display">
 <link rel="canonical" href="https://thinkwood.in/privacy.html">
 <meta name="theme-color" content="#FAFAF6">
-<link rel="icon" href="favicon.png">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="180x180" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -249,7 +281,7 @@ h3{font-family:'Jost',sans-serif;font-weight:500;font-size:1.02rem;line-height:1
       <p>We may also disclose information where the law requires it.</p>
 
       <h2>Cookies</h2>
-      <p>This website doesn't set its own advertising or analytics cookies. Pages load fonts from Google Fonts, and our enquiry form is delivered by Formspree; these services may receive technical details such as your IP address and browser type when a page loads.</p>
+      <p>We use Google Ads conversion tracking so we can see which of our ads bring genuine enquiries. It records when someone taps our phone number, taps our WhatsApp button or sends our enquiry form, and it may set a cookie on your device. It tells us how many enquiries an ad produced, not who you are. Pages also load fonts from Google Fonts, and our enquiry form is delivered by Formspree; these services may receive technical details such as your IP address and browser type when a page loads.</p>
 
       <h2>How long we keep it</h2>
       <p>We keep enquiry details for as long as we need them to respond, quote and deliver your project, and afterwards only as long as required for our business, accounting and legal records.</p>
