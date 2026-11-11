@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) — Google Ads conversion tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18268101915"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18268101915');
+</script>
+<script>
+/* Counts enquiries as Google Ads conversions: phone taps, WhatsApp taps and enquiry-form sends. */
+(function(){
+  var CALL    = 'AW-18268101915/DAuGCOzK4p0dEJu69IZE';   /* Click to call */
+  var ENQUIRY = 'AW-18268101915/Op6yCO_K4p0dEJu69IZE';   /* WhatsApp tap or form sent */
+  function report(label){
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'conversion', { send_to: label, value: 1.0, currency: 'INR' });
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a || !a.href) return;
+    if (a.href.indexOf('tel:') === 0) report(CALL);
+    else if (a.href.indexOf('wa.me') > -1 || a.href.indexOf('api.whatsapp.com') > -1) report(ENQUIRY);
+  }, true);
+  document.addEventListener('submit', function(e){
+    if (e.target && e.target.id === 'inquiry-form') report(ENQUIRY);
+  }, true);
+})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ==========================================================================
+     THINKWOOD — HIGH GLOSS POLYMER LAMINATES
+     Landing page for the separate Google Ads campaign selling 1 mm high gloss
+     polymer laminate sheets (8x4 ft) at Rs 1,650 per sheet. Same tokens, nav,
+     footer, enquiry form and conversion tracking as the other landing pages.
+     ========================================================================== -->
+
+<title>High Gloss Polymer Laminates (Sunmica) in Kolkata — ₹1,650 per Sheet | Thinkwood</title>
+<meta name="description" content="1 mm high gloss polymer laminate sheets, 8×4 ft, ₹1,650 per sheet in Kolkata. 180° bendable, unicore, high strength, scratch resistant and waterproof — made for cupboards and wardrobes.">
+<link rel="canonical" href="https://thinkwood.in/high-gloss-laminates.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="High Gloss Polymer Laminates — ₹1,650 per Sheet | Thinkwood">
+<meta property="og:description" content="1 mm high gloss polymer laminate, 8×4 ft sheets at ₹1,650. 180° bendable, unicore, scratch resistant and waterproof — for cupboards and wardrobes in Kolkata.">
+<meta property="og:url" content="https://thinkwood.in/high-gloss-laminates.html">
+<meta property="og:site_name" content="Thinkwood Decorative Woods">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://thinkwood.in/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FAFAF6">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="180x180" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===== tokens — identical to thinkwood.in ===== */
+:root{
+  --cream:#F5EFE4; --bark:#2E1F0F; --oak:#7A5630; --sand:#C9A97A;
+  --moss:#3D4A30; --light:#FAFAF6; --gold:#A67C3A; --offwhite:#F0EAE0;
+  --rule:rgba(122,86,48,0.18);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --gut:clamp(1.25rem,5vw,5rem);
+  --maxw:1240px;
+  --mm:22px;
+}
+@media (max-width:760px){ :root{ --mm:13px; } }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--light); color:var(--bark);
+  font-family:'Jost',sans-serif; font-weight:300; font-size:16px; line-height:1.7;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:1.5px solid var(--oak);outline-offset:3px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--bark);margin:0}
+h1{font-size:clamp(2.4rem,5.2vw,4.4rem);line-height:1.08}
+h1 em,h2 em{font-style:italic;color:var(--oak)}
+h2{font-size:clamp(2rem,3.2vw,3rem);line-height:1.15}
+h3{font-family:'Jost',sans-serif;font-weight:500;font-size:1.02rem;line-height:1.4;margin:0;letter-spacing:.01em}
+
+.sec-tag{
+  font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  margin:0 0 1.4rem;display:flex;align-items:center;gap:.8rem;font-weight:400;
+}
+.sec-tag::before{content:'';display:block;width:2.4rem;height:1px;background:var(--gold)}
+.lede{font-size:.98rem;line-height:1.85;color:rgba(46,31,15,.72);max-width:58ch;font-weight:300}
+
+/* ===== buttons — site style ===== */
+.btn-primary,.btn-secondary{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:'Jost',sans-serif;font-size:.74rem;font-weight:400;
+  letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+  padding:.85rem 2rem;border:1px solid transparent;cursor:pointer;transition:all .25s;
+}
+.btn-primary{background:var(--bark);color:var(--cream)}
+.btn-primary:hover{background:var(--oak)}
+.btn-secondary{border-color:var(--oak);color:var(--oak);background:transparent}
+.btn-secondary:hover{background:var(--oak);color:var(--light)}
+.btn-sm{padding:.6rem 1.3rem;font-size:.66rem}
+
+/* ===== nav ===== */
+#navbar{
+  position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:2rem;
+  padding:.65rem var(--gut);background:rgba(250,250,246,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.logo-img{height:52px;object-fit:contain}
+.nav-links{display:flex;gap:2.2rem;list-style:none;margin:0 0 0 auto;padding:0}
+.nav-links a{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bark);text-decoration:none;opacity:.82;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav-cta{
+  font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:.55rem 1.4rem;
+  border:1px solid var(--oak);color:var(--oak);text-decoration:none;transition:all .25s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--oak);color:var(--light)}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .logo-img{height:42px}
+  #navbar{gap:1rem}
+  .nav-cta{margin-left:auto}
+}
+
+/* ===== hero ===== */
+.hero{padding:clamp(2.8rem,6vw,5rem) 0 clamp(2rem,4vw,3.4rem)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.8rem,5vw,4rem);align-items:center}
+@media (max-width:900px){ .hero-grid{grid-template-columns:1fr} }
+.hero-btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero-facts{
+  display:flex;flex-wrap:wrap;gap:.5rem 2.4rem;margin-top:2.2rem;padding-top:1.4rem;
+  border-top:1px solid var(--rule);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(46,31,15,.55);
+}
+.hero-facts b{color:var(--oak);font-weight:500}
+
+.detail{background:var(--cream);border:1px solid var(--rule);padding:1.3rem}
+.detail svg{width:100%;height:auto;display:block}
+.hero-shot img{width:100%;height:clamp(280px,34vw,420px);object-fit:cover;object-position:center 50%;display:block}
+.detail figcaption{
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+  margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--rule);
+}
+.dr{opacity:0;animation:drIn .8s var(--ease) forwards}
+@keyframes drIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+
+/* ===== sections ===== */
+.sec{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--rule)}
+.sec--cream{background:var(--cream)}
+.sec-head{max-width:62ch;margin-bottom:2.6rem}
+.sec-head p{margin:1rem 0 0}
+
+/* ===== material cards ===== */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media (max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:620px){ .grid{grid-template-columns:1fr} }
+
+.pcard{background:var(--light);border:1px solid var(--rule);display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s,transform .25s}
+.pcard:hover{border-color:var(--sand);transform:translateY(-3px)}
+.pcard-media{position:relative;aspect-ratio:4/3;background:var(--offwhite);overflow:hidden}
+.pcard-media img{width:100%;height:100%;object-fit:cover;position:relative;z-index:2}
+.pcard-media svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.pcard-tag{position:absolute;top:.8rem;left:.8rem;z-index:3;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream);background:rgba(46,31,15,.68);padding:.32rem .7rem}
+.pcard-body{padding:1.4rem 1.4rem 1.5rem;display:flex;flex-direction:column;flex:1}
+.pcard-body p{margin:.7rem 0 0;font-size:.86rem;line-height:1.75;color:rgba(46,31,15,.66)}
+.specs{list-style:none;margin:1.2rem 0 1.4rem;padding:1rem 0 0;border-top:1px solid var(--rule);font-size:.72rem;letter-spacing:.06em}
+.specs li{display:flex;justify-content:space-between;gap:1rem;padding:.24rem 0;color:rgba(46,31,15,.55);text-transform:uppercase}
+.specs b{color:var(--oak);font-weight:500;text-align:right;text-transform:none;letter-spacing:.02em}
+.pcard-foot{margin-top:auto;display:flex;align-items:stretch;gap:.6rem;flex-wrap:wrap}
+.dl-link{display:inline-flex;align-items:center;gap:.45rem;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--oak);text-decoration:none;padding:.6rem 1.1rem;border:1px solid var(--rule);background:transparent;transition:border-color .25s,background .25s,color .25s}
+.dl-link:hover{border-color:var(--oak);background:var(--oak);color:var(--light)}
+.dl-link svg{width:13px;height:13px;fill:currentColor;flex:0 0 13px}
+.check-row{display:flex;align-items:flex-start;gap:.7rem;padding:.9rem 0 .2rem}
+.check-row input{width:16px;height:16px;flex:0 0 16px;margin:.18rem 0 0;accent-color:var(--sand)}
+.check-row label{font-size:.82rem;color:rgba(245,239,228,.72);line-height:1.6;letter-spacing:0;text-transform:none;margin:0;cursor:pointer}
+
+/* ===== portfolio (drawn placeholders — swap for real photography) ===== */
+.sec--off{background:var(--offwhite)}
+.port-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+.port-item{position:relative;overflow:hidden;background:#1a1206;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.port-item:hover{transform:translateY(-3px);box-shadow:0 22px 50px -28px rgba(20,12,4,.45)}
+.port-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+.port-item:hover img{transform:scale(1.045)}
+.port-label{position:absolute;bottom:0;left:0;right:0;padding:.85rem 1.1rem;background:linear-gradient(to top,rgba(20,12,4,.9),transparent);color:var(--cream);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.port-item:hover .port-label{opacity:1}
+.pw{grid-column:span 6;height:340px}
+.pt{grid-column:span 4;height:340px}
+@media (max-width:900px){
+  .port-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .pw{grid-column:span 2;height:230px}
+  .pt{grid-column:span 1;height:230px}
+  .port-label{font-size:.62rem}
+}
+@media (max-width:520px){
+  .port-grid{grid-template-columns:1fr}
+  .pw{grid-column:span 1;height:220px}
+  .pt{grid-column:span 1;height:220px}
+}
+
+/* ===== steps ===== */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1.4rem}
+@media (max-width:980px){ .steps{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:520px){ .steps{grid-template-columns:1fr} }
+.step{border-top:1px solid var(--bark);padding-top:1rem}
+.step-n{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--sand);line-height:1}
+.step h3{margin:.5rem 0 .5rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+.step p{margin:0;font-size:.82rem;line-height:1.7;color:rgba(46,31,15,.62)}
+
+/* ===== faq ===== */
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:1.15rem 2.4rem 1.15rem 0;position:relative;font-size:.95rem;font-weight:400}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:.3rem;top:1rem;font-size:1.2rem;color:var(--oak);font-weight:300}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 1.3rem;color:rgba(46,31,15,.66);font-size:.88rem;line-height:1.85;max-width:72ch}
+
+/* ===== quote ===== */
+.quote{background:var(--bark);color:var(--cream);border-top:0}
+.quote h2{color:var(--cream)}
+.quote h2 em{color:var(--sand)}
+.quote .sec-tag{color:var(--sand)}
+.quote .sec-tag::before{background:var(--sand)}
+.quote-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4.5rem)}
+@media (max-width:880px){ .quote-grid{grid-template-columns:1fr} }
+.quote-aside p{color:rgba(245,239,228,.6);font-size:.9rem;line-height:1.85}
+
+.contact-rows{margin-top:2rem;display:flex;flex-direction:column}
+.crow-link{
+  display:flex;align-items:center;gap:.95rem;padding:.85rem 0;text-decoration:none;
+  border-bottom:1px solid rgba(245,239,228,.1);color:rgba(245,239,228,.78);font-size:.88rem;transition:color .2s;
+}
+.crow-link:hover{color:#fff}
+.crow-link .ico{width:34px;height:34px;flex:0 0 34px;border-radius:50%;display:grid;place-items:center}
+.crow-link .lbl{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,239,228,.42);display:block;margin-bottom:.15rem}
+.ico-wa{background:#25D366}
+.ico-fb{background:#1877F2}
+.ico-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.ico-call{background:var(--moss)}
+.ico svg{width:17px;height:17px;fill:#fff}
+
+/* ===== form ===== */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.full{grid-column:1/-1}
+@media (max-width:560px){ .form{grid-template-columns:1fr} }
+.field label{display:block;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,239,228,.45);margin-bottom:.45rem}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'Jost',sans-serif;font-weight:300;font-size:.9rem;color:var(--cream);
+  background:transparent;border:1px solid rgba(245,239,228,.2);padding:.72rem .8rem;border-radius:0;
+}
+.field textarea{resize:vertical;min-height:92px}
+.field select option{color:var(--bark)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--sand);outline:none}
+.form .btn-primary{background:var(--sand);color:var(--bark);justify-content:center;width:100%}
+.form .btn-primary:hover{background:var(--cream)}
+.consent{font-size:.68rem;color:rgba(245,239,228,.35);margin:.5rem 0 0;letter-spacing:.06em}
+[data-fs-success],[data-fs-error]{grid-column:1/-1;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 0}
+[data-fs-success]{color:var(--sand)}
+[data-fs-error]{color:#D89B9B}
+
+/* ===== footer — mirrors thinkwood.in ===== */
+.footer-main{background:#1a0e05;padding:4rem 5rem 2rem;box-sizing:border-box;display:flex;flex-direction:column}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem;width:100%;align-items:start}
+.footer-three-cols{display:contents}
+.footer-logo-img{height:52px;object-fit:contain;margin-bottom:1.2rem}
+.footer-brand-desc{font-size:0.82rem;color:rgba(245,239,228,0.55);line-height:1.75;max-width:240px;margin-bottom:1.5rem}
+.footer-socials{display:flex;gap:0.75rem}
+.footer-social-btn{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.25s;flex-shrink:0;border:1px solid rgba(245,239,228,0.2)}
+.footer-social-btn svg{width:17px;height:17px;fill:rgba(245,239,228,.75);transition:fill .25s}
+.footer-social-btn:hover{border-color:transparent}
+.footer-social-btn:hover svg{fill:#fff}
+.footer-social-btn.wa:hover{background:#25D366}
+.footer-social-btn.fb:hover{background:#1877F2}
+.footer-social-btn.ig:hover{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.footer-social-btn.call:hover{background:var(--moss)}
+.footer-col-title{font-size:0.65rem;letter-spacing:0.26em;text-transform:uppercase;color:#C4956C;margin-bottom:1.4rem}
+.footer-col-links{display:flex;flex-direction:column;gap:0.75rem}
+.footer-col-links a{font-size:0.84rem;color:rgba(245,239,228,0.65);text-decoration:none;transition:color 0.2s}
+.footer-col-links a:hover{color:#fff}
+.footer-visit-item{font-size:0.84rem;color:rgba(245,239,228,0.65);line-height:1.7;margin:0 0 0.5rem}
+.footer-visit-item a{color:rgba(245,239,228,0.65);text-decoration:none;transition:color 0.2s}
+.footer-visit-item a:hover{color:#fff}
+.footer-bottom-bar{border-top:1px solid rgba(245,239,228,0.08);padding:1.2rem 0 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;width:100%;margin-top:auto}
+.footer-copy,.footer-location{font-size:0.72rem;color:rgba(245,239,228,0.3);letter-spacing:0.06em;margin:0}
+@media (max-width:900px){
+  .footer-main{padding:3rem 2rem 2rem}
+  .footer-grid{grid-template-columns:1fr;gap:1.5rem}
+  .footer-three-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem}
+  .footer-col-links a{font-size:0.75rem}
+  .footer-col-title{font-size:0.6rem;margin-bottom:0.6rem}
+  .footer-visit-item{font-size:0.75rem}
+}
+@media (max-width:520px){ .footer-main{padding:2.5rem 1.25rem 1.5rem} }
+
+/* ===== whatsapp float ===== */
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:80;width:54px;height:54px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(26,14,5,.28)}
+.wa-fab svg{width:28px;height:28px;fill:#fff}
+
+/* ===== reveal ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .dr{opacity:1}
+}
+
+/* ===== breadcrumb / back to site ===== */
+.crumb{background:var(--cream);border-bottom:1px solid var(--rule)}
+.crumb-in{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;
+  padding:.6rem 0;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase}
+.crumb a{color:var(--oak);text-decoration:none;display:inline-flex;align-items:center;gap:.45rem;transition:opacity .2s}
+.crumb a:hover{opacity:.65}
+.crumb a svg{width:11px;height:11px;fill:currentColor}
+.crumb .sep{color:rgba(46,31,15,.28)}
+.crumb .here{color:rgba(46,31,15,.5)}
+@media (max-width:520px){ .crumb-in{font-size:.62rem;letter-spacing:.12em} }
+
+/* ===== sticky top bar ===== */
+/* nav + breadcrumb travel together, so "Back to Thinkwood" stays reachable from anywhere on the page */
+.topbar{position:sticky;top:0;z-index:60}
+.topbar #navbar{position:static}
+section[id]{scroll-margin-top:132px}
+/* ===== mobile layer ===== */
+@media (max-width:900px){
+  #navbar{padding:.4rem var(--gut);gap:.75rem}
+  .logo-img{height:36px}
+  .nav-cta{padding:.6rem 1rem;font-size:.7rem;letter-spacing:.12em}
+  .crumb-in{flex-wrap:nowrap;overflow:hidden;padding:.3rem 0;font-size:.72rem;letter-spacing:.1em;gap:.45rem}
+  .crumb-in>*{white-space:nowrap;flex-shrink:0}
+  .crumb .here{flex-shrink:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .crumb a{padding:.3rem 0}
+  section[id]{scroll-margin-top:96px}
+  /* 16px stops iPhone Safari zooming the page when a field is tapped */
+  .field input,.field select,.field textarea{font-size:16px}
+  .footer-three-cols{grid-template-columns:1fr 1fr;gap:1.6rem 1rem}
+  .footer-three-cols>div:last-child{grid-column:1/-1}
+  .footer-col-links{gap:.15rem}
+  .footer-col-links a{font-size:.9rem;padding:.4rem 0}
+  .footer-col-title{font-size:.68rem}
+  .footer-visit-item{font-size:.9rem}
+  /* leaves room so the floating WhatsApp button never covers the copyright line */
+  .footer-main{padding-bottom:6rem}
+  .port-label{opacity:1}
+}
+@media (max-width:620px){
+  .hero-btns{flex-direction:column;align-items:stretch}
+  .hero-btns a{justify-content:center}
+  .sec-tag{font-size:.74rem;letter-spacing:.2em}
+  .pcard-tag{font-size:.66rem}
+  .specs{font-size:.78rem}
+  .specs li{flex-wrap:wrap;column-gap:.75rem}
+  .specs b{margin-left:auto;min-width:0;overflow-wrap:anywhere}
+  .pcard-foot>*,.coll-foot>*{flex:1 1 0;justify-content:center;min-height:44px}
+  .btn-sm,.dl-link{font-size:.72rem}
+  .port-label{font-size:.72rem}
+  .chip{min-height:42px;font-size:.72rem}
+  .step p,.faq details p{font-size:.92rem}
+  .wa-fab{width:50px;height:50px;right:14px;bottom:14px}
+  .check-row input{width:20px;height:20px;flex:0 0 20px}
+}
+
+/* ===== card gallery ===== */
+.pcard-media,.coll-media{position:relative}
+.pcard-media img[data-g],.coll-media img[data-g]{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease;z-index:2}
+.pcard-media img[data-g].is-on,.coll-media img[data-g].is-on{opacity:1}
+.gdots{position:absolute;left:0;right:0;bottom:.55rem;display:flex;justify-content:center;gap:.38rem;z-index:6}
+.gdots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(0,0,0,.25);cursor:pointer;transition:background .2s,transform .2s}
+.gdots button.is-on{background:#fff;transform:scale(1.25)}
+@media (hover:hover){.gdots button:hover{background:#fff}}
+@media (max-width:620px){.gdots button{width:9px;height:9px}}
+.gnav{position:absolute;top:50%;transform:translateY(-50%);z-index:7;width:30px;height:30px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.85);color:#2E1F0F;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 1px 6px rgba(46,31,15,.22);opacity:0;transition:opacity .25s,background .2s}
+.gnav svg{position:static;inset:auto;width:13px;height:13px;fill:currentColor;display:block}
+.gprev{left:.5rem}
+.gnext{right:.5rem}
+.gnext svg{transform:rotate(180deg)}
+.pcard-media:hover .gnav,.coll-media:hover .gnav,.gnav:focus-visible{opacity:1}
+.gnav:hover{background:#fff}
+@media (hover:none){.gnav{opacity:.82}}
+@media (max-width:620px){.gnav{width:34px;height:34px}}
+
+/* ===== high gloss laminate page ===== */
+.price-pill{display:inline-flex;align-items:baseline;gap:.5rem;margin-top:1.6rem;padding:.7rem 1.2rem;
+  border:1px solid var(--rule);background:var(--cream)}
+.price-pill b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:2rem;color:var(--bark);line-height:1}
+.price-pill span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(46,31,15,.6)}
+.gloss{position:relative;height:clamp(280px,34vw,420px);overflow:hidden;
+  background:linear-gradient(160deg,#fbfaf7 0%,#e9e4da 46%,#d7cfc1 100%);border:1px solid var(--rule)}
+.gloss::before{content:'';position:absolute;inset:-40% -10% auto auto;width:70%;height:180%;transform:rotate(24deg);
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.85) 45%,rgba(255,255,255,0) 100%)}
+.gloss::after{content:'';position:absolute;left:8%;right:8%;bottom:0;height:22%;
+  background:linear-gradient(180deg,rgba(46,31,15,0),rgba(46,31,15,.07));border-top:1px solid rgba(255,255,255,.7)}
+.gloss-bend{position:absolute;right:8%;top:14%;bottom:22%;width:16%;border-radius:0 46% 46% 0;
+  background:linear-gradient(90deg,#e4ded2,#fbfaf7 55%,#cfc6b6);box-shadow:inset -10px 0 18px rgba(46,31,15,.10)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+@media (max-width:900px){ .feat-grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:560px){ .feat-grid{grid-template-columns:1fr} }
+.feat{background:var(--light);border:1px solid var(--rule);padding:1.5rem 1.4rem}
+.feat-n{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--oak);line-height:1;margin-bottom:.7rem}
+.feat p{margin:.5rem 0 0;font-size:.92rem;line-height:1.75;color:rgba(46,31,15,.72)}
+.spec-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;align-items:start}
+@media (max-width:900px){ .spec-wrap{grid-template-columns:1fr} }
+.spec-card{background:var(--cream);border:1px solid var(--rule);padding:1.6rem}
+.uses{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.6rem}
+.uses li{padding:.8rem 1rem;border:1px solid var(--rule);background:var(--light);font-size:.95rem}
+.uses li b{font-weight:500;color:var(--bark)}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<div class="topbar">
+<nav id="navbar">
+  <a href="index.html" class="nav-home"><img class="logo-img" src="images/logo.png" alt="Thinkwood Decorative Woods" width="160" height="38"></a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#specs">Specifications</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#quote" class="nav-cta">Order Sheets</a>
+</nav>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="crumb">
+  <div class="wrap crumb-in">
+    <a href="https://thinkwood.in/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/></svg>Back to Thinkwood</a>
+    <span class="sep">/</span>
+    <a href="laminates-and-louvres.html">Laminates</a>
+    <span class="sep">/</span>
+    <span class="here">High Gloss Polymer Laminates</span>
+  </div>
+</div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="sec-tag">High Gloss Laminates — Kolkata</p>
+      <h1>High gloss that bends.<br><em>Built for cupboards.</em></h1>
+      <p class="lede" style="margin-top:1.4rem">
+        A 1&nbsp;mm polymer laminate with a mirror-gloss face that bends through 180° without
+        cracking, so it follows shutter edges and curves cleanly. Unicore, high strength,
+        scratch resistant and waterproof. Full 8&nbsp;×&nbsp;4&nbsp;ft sheets, in stock in Kolkata.
+      </p>
+      <div class="price-pill"><b>₹1,650</b><span>per sheet incl. GST · 8×4 ft · 1 mm</span></div>
+      <div class="hero-btns">
+        <a href="https://wa.me/919830020010?text=Hi%20Thinkwood%2C%20I%27m%20interested%20in%20the%20high%20gloss%20polymer%20laminate%20sheets%20(%E2%82%B91%2C650%20per%20sheet).%20Which%20colours%20are%20available%3F" class="btn-primary" target="_blank" rel="noopener">WhatsApp to Order</a>
+        <a href="tel:+919830020010" class="btn-secondary">Call +91 98300 20010</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>180°</b> · bendable</div>
+        <div><b>Unicore</b> · colour through the core</div>
+        <div><b>In stock</b> · Kolkata</div>
+      </div>
+    </div>
+
+    <figure class="detail" style="margin:0">
+      <div class="gloss" role="img" aria-label="Illustration of a high gloss laminate sheet bending around an edge"><div class="gloss-bend"></div></div>
+      <figcaption>High gloss polymer — bends round a shutter edge</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="sec sec--cream" id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">01 — Why It Works</p>
+      <h2>Six reasons it suits<br><em>cupboard work.</em></h2>
+      <p class="lede">Made for the parts of a cupboard that take the most handling — shutters, edges and drawer fronts.</p>
+    </div>
+    <div class="feat-grid reveal">
+      <div class="feat"><div class="feat-n">180°</div><h3>Bendable</h3><p>Bends right round a shutter edge or a curve without heat and without cracking, so the gloss runs on unbroken.</p></div>
+      <div class="feat"><div class="feat-n">01</div><h3>Unicore</h3><p>The colour runs through the core of the sheet, so cut edges and grooves don't show a dark line.</p></div>
+      <div class="feat"><div class="feat-n">02</div><h3>High Strength</h3><p>A tough polymer body that stands up to daily knocks on cupboard doors and drawers.</p></div>
+      <div class="feat"><div class="feat-n">03</div><h3>Scratch Resistant</h3><p>A hard-wearing gloss face that keeps its shine through everyday opening and closing.</p></div>
+      <div class="feat"><div class="feat-n">04</div><h3>Waterproof</h3><p>Polymer doesn't swell or lift with moisture, so it handles kitchens and Kolkata's monsoon humidity.</p></div>
+      <div class="feat"><div class="feat-n">05</div><h3>Made For Cupboards</h3><p>Sized and finished for wardrobe and kitchen shutters, drawer fronts and storage units.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPECS ===== -->
+<section class="sec" id="specs">
+  <div class="wrap spec-wrap">
+    <div class="reveal">
+      <p class="sec-tag">02 — Specifications</p>
+      <h2>One sheet,<br><em>all the numbers.</em></h2>
+      <p class="lede">Every sheet is a full 8&nbsp;×&nbsp;4&nbsp;ft at 1&nbsp;mm. Message us on WhatsApp and we'll send photos of the colours in stock.</p>
+      <ul class="uses">
+        <li><b>Wardrobes</b> — shutters, lofts and sliding doors</li>
+        <li><b>Kitchen cupboards</b> — base and wall units, where moisture is constant</li>
+        <li><b>Storage units</b> — drawers, crockery units, TV and study cabinets</li>
+      </ul>
+    </div>
+    <div class="spec-card reveal">
+      <ul class="specs">
+        <li>Material <b>High gloss polymer laminate</b></li>
+        <li>Finish <b>High gloss</b></li>
+        <li>Thickness <b>1 mm</b></li>
+        <li>Sheet size <b>8 × 4 ft</b></li>
+        <li>Bend <b>180°</b></li>
+        <li>Core <b>Unicore</b></li>
+        <li>Water <b>Waterproof</b></li>
+        <li>Surface <b>Scratch resistant</b></li>
+        <li>Price <b>₹1,650 per sheet, incl. GST</b></li>
+      </ul>
+      <div class="hero-btns" style="margin-top:1.4rem">
+        <a href="https://wa.me/919830020010?text=Hi%20Thinkwood%2C%20I%27m%20interested%20in%20the%20high%20gloss%20polymer%20laminate%20sheets%20(%E2%82%B91%2C650%20per%20sheet).%20Which%20colours%20are%20available%3F" class="btn-primary btn-sm" target="_blank" rel="noopener">See Colours on WhatsApp</a>
+        <a href="#quote" class="btn-secondary btn-sm">Send an Enquiry</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec sec--cream" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag">03 — Straight Answers</p>
+      <h2>Questions people <em>ask first.</em></h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>What does a sheet cost?</summary><p>₹1,650 per sheet including GST, for a full 8&nbsp;×&nbsp;4&nbsp;ft sheet at 1&nbsp;mm. Call or WhatsApp us with the number of sheets you need.</p></details>
+      <details><summary>Which colours are available?</summary><p>Message us on WhatsApp and we'll send photos of the colours in stock, or come and see the sheets at our Experience Centre.</p></details>
+      <details><summary>Can I buy just a few sheets?</summary><p>Yes. We sell single sheets for a home project as well as larger quantities for carpenters, contractors and interior designers.</p></details>
+      <details><summary>Is it suitable for a kitchen?</summary><p>Yes. The polymer sheet is waterproof, so it handles kitchen moisture and humid weather without swelling or lifting.</p></details>
+      <details><summary>What does "unicore" mean?</summary><p>The colour runs right through the core of the sheet rather than sitting only on the surface, so cut edges and grooves keep the same colour instead of showing a dark line.</p></details>
+      <details><summary>Where can I see it?</summary><p>At the Thinkwood Experience Centre, 13C Paul Mansions, 6 Bishop Lefroy Road, Kolkata, Mon–Sat 10:30 AM to 7 PM. Call ahead and we'll keep the sheets ready.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUOTE ===== -->
+<section class="sec quote" id="quote">
+  <div class="wrap quote-grid">
+    <div class="quote-aside">
+      <p class="sec-tag">Order</p>
+      <h2>Tell us the sheets.<br><em>We'll call you back.</em></h2>
+      <p>₹1,650 per 8&nbsp;×&nbsp;4&nbsp;ft sheet, GST included. Tell us how many sheets and what they're for, and we'll confirm colours and availability.</p>
+
+      <div class="contact-rows">
+        <a class="crow-link" href="https://wa.me/919830020010?text=Hi%20Thinkwood%2C%20I%27m%20interested%20in%20the%20high%20gloss%20polymer%20laminate%20sheets%20(%E2%82%B91%2C650%20per%20sheet).%20Which%20colours%20are%20available%3F" target="_blank" rel="noopener">
+          <span class="ico ico-wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg></span>
+          <span><span class="lbl">WhatsApp</span>Ask for colours in stock — fastest reply</span>
+        </a>
+        <a class="crow-link" href="tel:+919830020010">
+          <span class="ico ico-call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
+          <span><span class="lbl">Call</span>+91 98300 20010</span>
+        </a>
+        <a class="crow-link" href="https://maps.google.com/?q=13C+Paul+Mansions+6+Bishop+Lefroy+Road+Kolkata+700020" target="_blank" rel="noopener">
+          <span class="ico" style="background:var(--oak)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1114.5 9 2.5 2.5 0 0112 11.5z"/></svg></span>
+          <span><span class="lbl">Experience Centre</span>13C Paul Mansions, Bishop Lefroy Rd</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div data-fs-success style="display:none">Sent — we'll be in touch shortly.</div>
+      <div data-fs-error style="display:none"></div>
+
+      <form id="inquiry-form" class="form">
+        <input type="hidden" name="_subject" value="High gloss laminate enquiry — thinkwood.in">
+        <input type="hidden" name="gclid" id="f_gclid">
+        <input type="hidden" name="utm_source" id="f_source">
+        <input type="hidden" name="utm_campaign" id="f_campaign">
+        <input type="hidden" name="utm_term" id="f_term">
+        <input type="hidden" name="landing_page" value="high-gloss-laminates">
+        <input type="hidden" name="material" value="High gloss polymer laminate (Rs 1,650/sheet)">
+
+        <div class="field"><label for="q_name">Your Name</label><input id="q_name" type="text" name="name" data-fs-field required autocomplete="name"></div>
+        <div class="field"><label for="q_phone">Phone</label><input id="q_phone" type="tel" name="phone" data-fs-field required autocomplete="tel" inputmode="tel"></div>
+        <div class="field"><label for="q_sheets">Sheets Needed</label><input id="q_sheets" type="text" name="sheets" data-fs-field inputmode="numeric" placeholder="e.g. 6"></div>
+        <div class="field"><label for="q_city">Area</label><input id="q_city" type="text" name="location" data-fs-field placeholder="Salt Lake, Behala, New Town…"></div>
+        <div class="field full"><label for="q_msg">What Is It For?</label><textarea id="q_msg" name="message" data-fs-field placeholder="Two wardrobes and a kitchen, white gloss."></textarea></div>
+        <div class="full">
+          <button type="submit" class="btn-primary" data-fs-submit-btn>Send Enquiry</button>
+          <p class="consent">We'll only use this to answer your enquiry.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer-main">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <p class="footer-brand-desc">Premium exterior and interior building materials for architects, designers, developers and homeowners across Kolkata and eastern India.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/thinkwood.in/" target="_blank" rel="noopener" class="footer-social-btn ig" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 00-2.13 1.38A5.9 5.9 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 002.13-1.38 5.9 5.9 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 00-1.38-2.13A5.9 5.9 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg>
+        </a>
+        <a href="https://www.facebook.com/thinkwoodofficial/" target="_blank" rel="noopener" class="footer-social-btn fb" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.5c-1.48 0-1.94.92-1.94 1.87v2.25h3.3l-.53 3.49h-2.77v8.44C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </a>
+        <a href="https://wa.me/919830020010" target="_blank" rel="noopener" class="footer-social-btn wa" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+        </a>
+        <a href="tel:+919830020010" class="footer-social-btn call" aria-label="Call us">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-three-cols">
+      <div>
+        <p class="footer-col-title">Explore</p>
+        <div class="footer-col-links">
+          <a href="https://thinkwood.in/#products">What we offer</a>
+          <a href="https://thinkwood.in/#portfolio">Projects</a>
+          <a href="https://thinkwood.in/#why">Why Thinkwood</a>
+          <a href="https://thinkwood.in/#contact">Experience Centre</a>
+          <a href="#quote">Get a quote</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Products</p>
+        <div class="footer-col-links">
+          <a href="cladding.html">Cladding</a>
+          <a href="decking.html">Decking</a>
+          <a href="laminates-and-louvres.html">Laminates &amp; louvres</a>
+          <a href="highlighters.html">Highlighters</a>
+          <a href="flooring.html">Flooring</a>
+          <a href="forms-and-surfaces.html">Forms + Surfaces</a>
+          <a href="outdoor-landscaping-products.html">Outdoor landscaping</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Visit</p>
+        <p class="footer-visit-item">13C Paul Mansions, 1st Floor<br>6 Bishop Lefroy Road<br>Kolkata 700020</p>
+        <p class="footer-visit-item"><a href="tel:+919830020010">+91 98300 20010</a></p>
+        <p class="footer-visit-item"><a href="mailto:thinkwood.ashish@gmail.com">thinkwood.ashish@gmail.com</a></p>
+        <p class="footer-visit-item">Mon – Sat · 10:30 AM to 7 PM</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom-bar">
+    <p class="footer-copy">© <span id="yr"></span> Thinkwood Decorative Woods. All rights reserved.</p>
+    <p class="footer-location">Kolkata, West Bengal, India</p>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/919830020010?text=Hi%20Thinkwood%2C%20I%27m%20interested%20in%20the%20high%20gloss%20polymer%20laminate%20sheets%20(%E2%82%B91%2C650%20per%20sheet).%20Which%20colours%20are%20available%3F" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.489-2.007A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.843l-.485-.288-5.036 1.19 1.27-4.91-.318-.503A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.778c-.398-.2-2.355-1.162-2.72-1.295-.366-.133-.632-.2-.899.2-.266.398-1.03 1.295-1.264 1.561-.232.266-.465.3-.863.1-.398-.2-1.681-.619-3.2-1.977-1.183-1.057-1.981-2.362-2.214-2.76-.232-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.2-.232.266-.398.398-.664.133-.266.067-.498-.033-.698-.1-.2-.899-2.163-1.231-2.96-.324-.778-.653-.672-.899-.685l-.765-.013c-.266 0-.698.1-1.064.498-.366.398-1.397 1.365-1.397 3.328s1.43 3.86 1.63 4.127c.199.266 2.814 4.296 6.818 6.027.953.411 1.697.657 2.277.841.957.305 1.828.262 2.516.159.767-.114 2.355-.962 2.688-1.893.332-.93.332-1.728.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Product","name":"High Gloss Polymer Laminate Sheet, 1 mm, 8 x 4 ft","description":"1 mm high gloss polymer laminate sheet, 8 x 4 ft. 180 degree bendable, unicore, high strength, scratch resistant and waterproof. Used for cupboards, wardrobes and kitchen units.","brand":{"@type":"Brand","name":"Thinkwood Decorative Woods"},"offers":{"@type":"Offer","price":"1650","priceCurrency":"INR","availability":"https://schema.org/InStock","url":"https://thinkwood.in/high-gloss-laminates.html","seller":{"@type":"LocalBusiness","name":"Thinkwood Decorative Woods","telephone":"+91-98300-20010","url":"https://thinkwood.in","address":{"@type":"PostalAddress","streetAddress":"13C Paul Mansions, 6 Bishop Lefroy Road","addressLocality":"Kolkata","addressRegion":"West Bengal","postalCode":"700020","addressCountry":"IN"}}}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thinkwood.in/"},{"@type":"ListItem","position":2,"name":"Laminates","item":"https://thinkwood.in/laminates-and-louvres.html"},{"@type":"ListItem","position":3,"name":"High Gloss Polymer Laminates","item":"https://thinkwood.in/high-gloss-laminates.html"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does a sheet cost?","acceptedAnswer":{"@type":"Answer","text":"Rs 1,650 per sheet including GST, for a full 8 x 4 ft sheet at 1 mm."}},
+{"@type":"Question","name":"Is it suitable for a kitchen?","acceptedAnswer":{"@type":"Answer","text":"Yes. The polymer sheet is waterproof, so it handles kitchen moisture and humid weather without swelling or lifting."}},
+{"@type":"Question","name":"What does unicore mean?","acceptedAnswer":{"@type":"Answer","text":"The colour runs through the core of the sheet, so cut edges and grooves keep the same colour instead of showing a dark line."}}
+]}]}
+</script>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+
+(function(){
+  var p=new URLSearchParams(location.search);
+  function set(id,k){ var el=document.getElementById(id); if(el) el.value=p.get(k)||''; }
+  set('f_gclid','gclid'); set('f_source','utm_source'); set('f_campaign','utm_campaign'); set('f_term','utm_term');
+})();
+
+(function(){
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#inquiry-form', formId: 'mojzoogz' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>
